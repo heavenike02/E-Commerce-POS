@@ -15,12 +15,16 @@ namespace E_Commerce_POS
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
+        DBConnect dbcon = new DBConnect();
 
         public MainForm()
         {
             InitializeComponent();
            StartBlankDesign();
-            conn = new SqlConnection();
+            conn = new SqlConnection(dbcon.myConnection());
+            conn.Open();
+        
+
         }
         #region SidebarPanel
         //method to make sub panels not visible
@@ -60,21 +64,89 @@ namespace E_Commerce_POS
                 Submenu.Visible = false;
             
         }
+
         #endregion SidebarPanel
 
-        private void MainBody_Paint(object sender, PaintEventArgs e)
+        private void DashBoardButton_Click(object sender, EventArgs e)
         {
-
+            HideSubPanel();
         }
 
-        private void StockSubPanel_Paint(object sender, PaintEventArgs e)
+        private void ProductButton_Click(object sender, EventArgs e)
         {
-
+            ShowSubMenu(ProductSubPanel);
         }
 
         private void ProductListButton_Click(object sender, EventArgs e)
         {
-
+            HideSubPanel();
         }
+
+        private void BrandButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void CatergoryButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void StockButton_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(StockSubPanel);
+        }
+
+        private void StockEntryButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void StockAdjustmentButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void FilesButton_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(FIlesSubPanel);
+        }
+
+        private void SalesHistoryButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void PosRecord_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(SettingsSubPanel);
+        }
+
+        private void UserButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void StoreButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void SupplierButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            HideSubPanel();
+        }
+
+       
     }
 }

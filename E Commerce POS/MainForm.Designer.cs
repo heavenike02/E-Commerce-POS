@@ -30,17 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.SidebarPanel = new System.Windows.Forms.Panel();
-            this.SettingsSubPanel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
             this.SupplierButton = new System.Windows.Forms.Button();
+            this.SettingsSubPanel = new System.Windows.Forms.Panel();
+            this.StoreButton = new System.Windows.Forms.Button();
+            this.UserButton = new System.Windows.Forms.Button();
+            this.SettingsButton = new System.Windows.Forms.Button();
+            this.FIlesSubPanel = new System.Windows.Forms.Panel();
+            this.PosRecord = new System.Windows.Forms.Button();
+            this.SalesHistoryButton = new System.Windows.Forms.Button();
+            this.FilesButton = new System.Windows.Forms.Button();
             this.StockSubPanel = new System.Windows.Forms.Panel();
             this.StockAdjustmentButton = new System.Windows.Forms.Button();
             this.StockEntryButton = new System.Windows.Forms.Button();
+            this.StockButton = new System.Windows.Forms.Button();
             this.ProductSubPanel = new System.Windows.Forms.Panel();
-            this.BrandButton = new System.Windows.Forms.Button();
             this.CatergoryButton = new System.Windows.Forms.Button();
+            this.BrandButton = new System.Windows.Forms.Button();
+            this.ProductListButton = new System.Windows.Forms.Button();
+            this.ProductButton = new System.Windows.Forms.Button();
             this.DashBoardButton = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,23 +58,16 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.MainBody = new System.Windows.Forms.Panel();
-            this.ProductListButton = new System.Windows.Forms.Button();
-            this.ProductButton = new System.Windows.Forms.Button();
-            this.StockButton = new System.Windows.Forms.Button();
-            this.FilesButton = new System.Windows.Forms.Button();
-            this.FIlesSubPanel = new System.Windows.Forms.Panel();
-            this.PosRecord = new System.Windows.Forms.Button();
-            this.SalesHistoryButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SidebarPanel.SuspendLayout();
             this.SettingsSubPanel.SuspendLayout();
+            this.FIlesSubPanel.SuspendLayout();
             this.StockSubPanel.SuspendLayout();
             this.ProductSubPanel.SuspendLayout();
             this.PanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.FIlesSubPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidebarPanel
@@ -75,7 +76,7 @@
             this.SidebarPanel.Controls.Add(this.LogOutButton);
             this.SidebarPanel.Controls.Add(this.SupplierButton);
             this.SidebarPanel.Controls.Add(this.SettingsSubPanel);
-            this.SidebarPanel.Controls.Add(this.button1);
+            this.SidebarPanel.Controls.Add(this.SettingsButton);
             this.SidebarPanel.Controls.Add(this.FIlesSubPanel);
             this.SidebarPanel.Controls.Add(this.FilesButton);
             this.SidebarPanel.Controls.Add(this.StockSubPanel);
@@ -87,64 +88,25 @@
             this.SidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidebarPanel.Location = new System.Drawing.Point(0, 0);
             this.SidebarPanel.Name = "SidebarPanel";
-            this.SidebarPanel.Size = new System.Drawing.Size(270, 845);
+            this.SidebarPanel.Size = new System.Drawing.Size(270, 661);
             this.SidebarPanel.TabIndex = 0;
-            // 
-            // SettingsSubPanel
-            // 
-            this.SettingsSubPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.SettingsSubPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SettingsSubPanel.Controls.Add(this.button3);
-            this.SettingsSubPanel.Controls.Add(this.button4);
-            this.SettingsSubPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SettingsSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.SettingsSubPanel.Location = new System.Drawing.Point(0, 614);
-            this.SettingsSubPanel.Name = "SettingsSubPanel";
-            this.SettingsSubPanel.Size = new System.Drawing.Size(270, 83);
-            this.SettingsSubPanel.TabIndex = 13;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 39);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(268, 39);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Store";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(268, 39);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "User";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // LogOutButton
             // 
             this.LogOutButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LogOutButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.ForeColor = System.Drawing.Color.White;
             this.LogOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogOutButton.Location = new System.Drawing.Point(0, 736);
+            this.LogOutButton.Location = new System.Drawing.Point(0, 733);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.LogOutButton.Size = new System.Drawing.Size(270, 39);
+            this.LogOutButton.Size = new System.Drawing.Size(249, 39);
             this.LogOutButton.TabIndex = 11;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // SupplierButton
             // 
@@ -156,11 +118,136 @@
             this.SupplierButton.Location = new System.Drawing.Point(0, 697);
             this.SupplierButton.Name = "SupplierButton";
             this.SupplierButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.SupplierButton.Size = new System.Drawing.Size(270, 39);
+            this.SupplierButton.Size = new System.Drawing.Size(249, 36);
             this.SupplierButton.TabIndex = 9;
             this.SupplierButton.Text = "Suppiler";
             this.SupplierButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SupplierButton.UseVisualStyleBackColor = true;
+            this.SupplierButton.Click += new System.EventHandler(this.SupplierButton_Click);
+            // 
+            // SettingsSubPanel
+            // 
+            this.SettingsSubPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.SettingsSubPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SettingsSubPanel.Controls.Add(this.StoreButton);
+            this.SettingsSubPanel.Controls.Add(this.UserButton);
+            this.SettingsSubPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SettingsSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SettingsSubPanel.Location = new System.Drawing.Point(0, 614);
+            this.SettingsSubPanel.Name = "SettingsSubPanel";
+            this.SettingsSubPanel.Size = new System.Drawing.Size(249, 83);
+            this.SettingsSubPanel.TabIndex = 13;
+            // 
+            // StoreButton
+            // 
+            this.StoreButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StoreButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.StoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StoreButton.ForeColor = System.Drawing.Color.White;
+            this.StoreButton.Location = new System.Drawing.Point(0, 39);
+            this.StoreButton.Name = "StoreButton";
+            this.StoreButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.StoreButton.Size = new System.Drawing.Size(247, 39);
+            this.StoreButton.TabIndex = 4;
+            this.StoreButton.Text = "Store";
+            this.StoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StoreButton.UseVisualStyleBackColor = true;
+            this.StoreButton.Click += new System.EventHandler(this.StoreButton_Click);
+            // 
+            // UserButton
+            // 
+            this.UserButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UserButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.UserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UserButton.ForeColor = System.Drawing.Color.White;
+            this.UserButton.Location = new System.Drawing.Point(0, 0);
+            this.UserButton.Name = "UserButton";
+            this.UserButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.UserButton.Size = new System.Drawing.Size(247, 39);
+            this.UserButton.TabIndex = 3;
+            this.UserButton.Text = "User";
+            this.UserButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.UserButton.UseVisualStyleBackColor = true;
+            this.UserButton.Click += new System.EventHandler(this.UserButton_Click);
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SettingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsButton.ForeColor = System.Drawing.Color.White;
+            this.SettingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SettingsButton.Location = new System.Drawing.Point(0, 575);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.SettingsButton.Size = new System.Drawing.Size(249, 39);
+            this.SettingsButton.TabIndex = 16;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SettingsButton.UseVisualStyleBackColor = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // FIlesSubPanel
+            // 
+            this.FIlesSubPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.FIlesSubPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FIlesSubPanel.Controls.Add(this.PosRecord);
+            this.FIlesSubPanel.Controls.Add(this.SalesHistoryButton);
+            this.FIlesSubPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FIlesSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.FIlesSubPanel.Location = new System.Drawing.Point(0, 499);
+            this.FIlesSubPanel.Name = "FIlesSubPanel";
+            this.FIlesSubPanel.Size = new System.Drawing.Size(249, 76);
+            this.FIlesSubPanel.TabIndex = 14;
+            // 
+            // PosRecord
+            // 
+            this.PosRecord.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PosRecord.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.PosRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PosRecord.ForeColor = System.Drawing.Color.White;
+            this.PosRecord.Location = new System.Drawing.Point(0, 39);
+            this.PosRecord.Name = "PosRecord";
+            this.PosRecord.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.PosRecord.Size = new System.Drawing.Size(247, 39);
+            this.PosRecord.TabIndex = 4;
+            this.PosRecord.Text = "POS Record";
+            this.PosRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PosRecord.UseVisualStyleBackColor = true;
+            this.PosRecord.Click += new System.EventHandler(this.PosRecord_Click);
+            // 
+            // SalesHistoryButton
+            // 
+            this.SalesHistoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SalesHistoryButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.SalesHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SalesHistoryButton.ForeColor = System.Drawing.Color.White;
+            this.SalesHistoryButton.Location = new System.Drawing.Point(0, 0);
+            this.SalesHistoryButton.Name = "SalesHistoryButton";
+            this.SalesHistoryButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.SalesHistoryButton.Size = new System.Drawing.Size(247, 39);
+            this.SalesHistoryButton.TabIndex = 3;
+            this.SalesHistoryButton.Text = "Sales History";
+            this.SalesHistoryButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.SalesHistoryButton.UseVisualStyleBackColor = true;
+            this.SalesHistoryButton.Click += new System.EventHandler(this.SalesHistoryButton_Click);
+            // 
+            // FilesButton
+            // 
+            this.FilesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FilesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.FilesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FilesButton.ForeColor = System.Drawing.Color.White;
+            this.FilesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FilesButton.Location = new System.Drawing.Point(0, 460);
+            this.FilesButton.Name = "FilesButton";
+            this.FilesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.FilesButton.Size = new System.Drawing.Size(249, 39);
+            this.FilesButton.TabIndex = 15;
+            this.FilesButton.Text = "FIles";
+            this.FilesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FilesButton.UseVisualStyleBackColor = true;
+            this.FilesButton.Click += new System.EventHandler(this.FilesButton_Click);
             // 
             // StockSubPanel
             // 
@@ -172,38 +259,57 @@
             this.StockSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.StockSubPanel.Location = new System.Drawing.Point(0, 375);
             this.StockSubPanel.Name = "StockSubPanel";
-            this.StockSubPanel.Size = new System.Drawing.Size(270, 85);
+            this.StockSubPanel.Size = new System.Drawing.Size(249, 85);
             this.StockSubPanel.TabIndex = 7;
-            this.StockSubPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.StockSubPanel_Paint);
             // 
             // StockAdjustmentButton
             // 
             this.StockAdjustmentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StockAdjustmentButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.StockAdjustmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StockAdjustmentButton.ForeColor = System.Drawing.Color.White;
             this.StockAdjustmentButton.Location = new System.Drawing.Point(0, 39);
             this.StockAdjustmentButton.Name = "StockAdjustmentButton";
             this.StockAdjustmentButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.StockAdjustmentButton.Size = new System.Drawing.Size(268, 39);
+            this.StockAdjustmentButton.Size = new System.Drawing.Size(247, 39);
             this.StockAdjustmentButton.TabIndex = 4;
             this.StockAdjustmentButton.Text = "Stock Adjustment";
             this.StockAdjustmentButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.StockAdjustmentButton.UseVisualStyleBackColor = true;
+            this.StockAdjustmentButton.Click += new System.EventHandler(this.StockAdjustmentButton_Click);
             // 
             // StockEntryButton
             // 
             this.StockEntryButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.StockEntryButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.StockEntryButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.StockEntryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StockEntryButton.ForeColor = System.Drawing.Color.White;
             this.StockEntryButton.Location = new System.Drawing.Point(0, 0);
             this.StockEntryButton.Name = "StockEntryButton";
             this.StockEntryButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.StockEntryButton.Size = new System.Drawing.Size(268, 39);
+            this.StockEntryButton.Size = new System.Drawing.Size(247, 39);
             this.StockEntryButton.TabIndex = 3;
             this.StockEntryButton.Text = "Stock Entry";
             this.StockEntryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.StockEntryButton.UseVisualStyleBackColor = true;
+            this.StockEntryButton.Click += new System.EventHandler(this.StockEntryButton_Click);
+            // 
+            // StockButton
+            // 
+            this.StockButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StockButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.StockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StockButton.ForeColor = System.Drawing.Color.White;
+            this.StockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StockButton.Location = new System.Drawing.Point(0, 336);
+            this.StockButton.Name = "StockButton";
+            this.StockButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.StockButton.Size = new System.Drawing.Size(249, 39);
+            this.StockButton.TabIndex = 14;
+            this.StockButton.Text = "Stock";
+            this.StockButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StockButton.UseVisualStyleBackColor = true;
+            this.StockButton.Click += new System.EventHandler(this.StockButton_Click);
             // 
             // ProductSubPanel
             // 
@@ -216,70 +322,110 @@
             this.ProductSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ProductSubPanel.Location = new System.Drawing.Point(0, 210);
             this.ProductSubPanel.Name = "ProductSubPanel";
-            this.ProductSubPanel.Size = new System.Drawing.Size(270, 126);
+            this.ProductSubPanel.Size = new System.Drawing.Size(249, 126);
             this.ProductSubPanel.TabIndex = 0;
-            // 
-            // BrandButton
-            // 
-            this.BrandButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BrandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BrandButton.ForeColor = System.Drawing.Color.White;
-            this.BrandButton.Location = new System.Drawing.Point(0, 39);
-            this.BrandButton.Name = "BrandButton";
-            this.BrandButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.BrandButton.Size = new System.Drawing.Size(268, 39);
-            this.BrandButton.TabIndex = 6;
-            this.BrandButton.Text = "Brand";
-            this.BrandButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BrandButton.UseVisualStyleBackColor = true;
             // 
             // CatergoryButton
             // 
             this.CatergoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CatergoryButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.CatergoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CatergoryButton.ForeColor = System.Drawing.Color.White;
             this.CatergoryButton.Location = new System.Drawing.Point(0, 78);
             this.CatergoryButton.Name = "CatergoryButton";
             this.CatergoryButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.CatergoryButton.Size = new System.Drawing.Size(268, 37);
+            this.CatergoryButton.Size = new System.Drawing.Size(247, 37);
             this.CatergoryButton.TabIndex = 4;
             this.CatergoryButton.Text = "Category";
             this.CatergoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CatergoryButton.UseVisualStyleBackColor = true;
+            this.CatergoryButton.Click += new System.EventHandler(this.CatergoryButton_Click);
+            // 
+            // BrandButton
+            // 
+            this.BrandButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BrandButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.BrandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BrandButton.ForeColor = System.Drawing.Color.White;
+            this.BrandButton.Location = new System.Drawing.Point(0, 39);
+            this.BrandButton.Name = "BrandButton";
+            this.BrandButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.BrandButton.Size = new System.Drawing.Size(247, 39);
+            this.BrandButton.TabIndex = 6;
+            this.BrandButton.Text = "Brand";
+            this.BrandButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BrandButton.UseVisualStyleBackColor = true;
+            this.BrandButton.Click += new System.EventHandler(this.BrandButton_Click);
+            // 
+            // ProductListButton
+            // 
+            this.ProductListButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProductListButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.ProductListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProductListButton.ForeColor = System.Drawing.Color.White;
+            this.ProductListButton.Location = new System.Drawing.Point(0, 0);
+            this.ProductListButton.Name = "ProductListButton";
+            this.ProductListButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.ProductListButton.Size = new System.Drawing.Size(247, 39);
+            this.ProductListButton.TabIndex = 3;
+            this.ProductListButton.Text = "Product List";
+            this.ProductListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductListButton.UseVisualStyleBackColor = true;
+            this.ProductListButton.Click += new System.EventHandler(this.ProductListButton_Click);
+            // 
+            // ProductButton
+            // 
+            this.ProductButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProductButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.ProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProductButton.ForeColor = System.Drawing.Color.White;
+            this.ProductButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductButton.Location = new System.Drawing.Point(0, 166);
+            this.ProductButton.Name = "ProductButton";
+            this.ProductButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ProductButton.Size = new System.Drawing.Size(249, 44);
+            this.ProductButton.TabIndex = 14;
+            this.ProductButton.Text = "Product";
+            this.ProductButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductButton.UseVisualStyleBackColor = true;
+            this.ProductButton.Click += new System.EventHandler(this.ProductButton_Click);
             // 
             // DashBoardButton
             // 
             this.DashBoardButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DashBoardButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
             this.DashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DashBoardButton.ForeColor = System.Drawing.Color.White;
             this.DashBoardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashBoardButton.Location = new System.Drawing.Point(0, 127);
             this.DashBoardButton.Name = "DashBoardButton";
             this.DashBoardButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.DashBoardButton.Size = new System.Drawing.Size(270, 39);
+            this.DashBoardButton.Size = new System.Drawing.Size(249, 39);
             this.DashBoardButton.TabIndex = 1;
             this.DashBoardButton.Text = "Dashboard";
             this.DashBoardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashBoardButton.UseVisualStyleBackColor = true;
+            this.DashBoardButton.Click += new System.EventHandler(this.DashBoardButton_Click);
             // 
             // PanelLogo
             // 
+            this.PanelLogo.Controls.Add(this.flowLayoutPanel1);
             this.PanelLogo.Controls.Add(this.label2);
             this.PanelLogo.Controls.Add(this.UserName);
             this.PanelLogo.Controls.Add(this.pictureBox1);
             this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(270, 127);
+            this.PanelLogo.Size = new System.Drawing.Size(249, 127);
             this.PanelLogo.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(43, 95);
+            this.label2.Location = new System.Drawing.Point(71, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
+            this.label2.Size = new System.Drawing.Size(64, 22);
             this.label2.TabIndex = 12;
             this.label2.Text = "Admin";
             // 
@@ -287,9 +433,9 @@
             // 
             this.UserName.AutoSize = true;
             this.UserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UserName.Location = new System.Drawing.Point(43, 77);
+            this.UserName.Location = new System.Drawing.Point(71, 77);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(71, 18);
+            this.UserName.Size = new System.Drawing.Size(87, 22);
             this.UserName.TabIndex = 0;
             this.UserName.Text = "Username";
             // 
@@ -298,7 +444,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(46, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -312,14 +458,14 @@
             this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitle.Location = new System.Drawing.Point(270, 0);
             this.PanelTitle.Name = "PanelTitle";
-            this.PanelTitle.Size = new System.Drawing.Size(830, 55);
+            this.PanelTitle.Size = new System.Drawing.Size(864, 55);
             this.PanelTitle.TabIndex = 1;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(483, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(530, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -339,135 +485,27 @@
             // MainBody
             // 
             this.MainBody.AutoScroll = true;
+            this.MainBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
             this.MainBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainBody.Location = new System.Drawing.Point(270, 55);
             this.MainBody.Name = "MainBody";
-            this.MainBody.Size = new System.Drawing.Size(830, 790);
+            this.MainBody.Size = new System.Drawing.Size(864, 606);
             this.MainBody.TabIndex = 2;
-            this.MainBody.Paint += new System.Windows.Forms.PaintEventHandler(this.MainBody_Paint);
+//            this.MainBody.Paint += new System.Windows.Forms.PaintEventHandler(this.MainBody_Paint);
             // 
-            // ProductListButton
+            // flowLayoutPanel1
             // 
-            this.ProductListButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ProductListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProductListButton.ForeColor = System.Drawing.Color.White;
-            this.ProductListButton.Location = new System.Drawing.Point(0, 0);
-            this.ProductListButton.Name = "ProductListButton";
-            this.ProductListButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.ProductListButton.Size = new System.Drawing.Size(268, 39);
-            this.ProductListButton.TabIndex = 3;
-            this.ProductListButton.Text = "Product List";
-            this.ProductListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProductListButton.UseVisualStyleBackColor = true;
-            this.ProductListButton.Click += new System.EventHandler(this.ProductListButton_Click);
-            // 
-            // ProductButton
-            // 
-            this.ProductButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProductButton.ForeColor = System.Drawing.Color.White;
-            this.ProductButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProductButton.Location = new System.Drawing.Point(0, 166);
-            this.ProductButton.Name = "ProductButton";
-            this.ProductButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ProductButton.Size = new System.Drawing.Size(270, 44);
-            this.ProductButton.TabIndex = 14;
-            this.ProductButton.Text = "Product";
-            this.ProductButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProductButton.UseVisualStyleBackColor = true;
-            // 
-            // StockButton
-            // 
-            this.StockButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.StockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StockButton.ForeColor = System.Drawing.Color.White;
-            this.StockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StockButton.Location = new System.Drawing.Point(0, 336);
-            this.StockButton.Name = "StockButton";
-            this.StockButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.StockButton.Size = new System.Drawing.Size(270, 39);
-            this.StockButton.TabIndex = 14;
-            this.StockButton.Text = "Stock";
-            this.StockButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StockButton.UseVisualStyleBackColor = true;
-            // 
-            // FilesButton
-            // 
-            this.FilesButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FilesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FilesButton.ForeColor = System.Drawing.Color.White;
-            this.FilesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FilesButton.Location = new System.Drawing.Point(0, 460);
-            this.FilesButton.Name = "FilesButton";
-            this.FilesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.FilesButton.Size = new System.Drawing.Size(270, 39);
-            this.FilesButton.TabIndex = 15;
-            this.FilesButton.Text = "FIles";
-            this.FilesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FilesButton.UseVisualStyleBackColor = true;
-            // 
-            // FIlesSubPanel
-            // 
-            this.FIlesSubPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.FIlesSubPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FIlesSubPanel.Controls.Add(this.PosRecord);
-            this.FIlesSubPanel.Controls.Add(this.SalesHistoryButton);
-            this.FIlesSubPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FIlesSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.FIlesSubPanel.Location = new System.Drawing.Point(0, 499);
-            this.FIlesSubPanel.Name = "FIlesSubPanel";
-            this.FIlesSubPanel.Size = new System.Drawing.Size(270, 76);
-            this.FIlesSubPanel.TabIndex = 14;
-            // 
-            // PosRecord
-            // 
-            this.PosRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PosRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PosRecord.ForeColor = System.Drawing.Color.White;
-            this.PosRecord.Location = new System.Drawing.Point(0, 39);
-            this.PosRecord.Name = "PosRecord";
-            this.PosRecord.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.PosRecord.Size = new System.Drawing.Size(268, 39);
-            this.PosRecord.TabIndex = 4;
-            this.PosRecord.Text = "POS Record";
-            this.PosRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PosRecord.UseVisualStyleBackColor = true;
-            // 
-            // SalesHistoryButton
-            // 
-            this.SalesHistoryButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SalesHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SalesHistoryButton.ForeColor = System.Drawing.Color.White;
-            this.SalesHistoryButton.Location = new System.Drawing.Point(0, 0);
-            this.SalesHistoryButton.Name = "SalesHistoryButton";
-            this.SalesHistoryButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.SalesHistoryButton.Size = new System.Drawing.Size(268, 39);
-            this.SalesHistoryButton.TabIndex = 3;
-            this.SalesHistoryButton.Text = "Sales History";
-            this.SalesHistoryButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.SalesHistoryButton.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 575);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(270, 39);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Settings";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(190, 111);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 13;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1100, 845);
+            this.ClientSize = new System.Drawing.Size(1134, 661);
             this.Controls.Add(this.MainBody);
             this.Controls.Add(this.PanelTitle);
             this.Controls.Add(this.SidebarPanel);
@@ -480,6 +518,7 @@
             this.Text = "Form1";
             this.SidebarPanel.ResumeLayout(false);
             this.SettingsSubPanel.ResumeLayout(false);
+            this.FIlesSubPanel.ResumeLayout(false);
             this.StockSubPanel.ResumeLayout(false);
             this.ProductSubPanel.ResumeLayout(false);
             this.PanelLogo.ResumeLayout(false);
@@ -487,7 +526,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.FIlesSubPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -501,7 +539,6 @@
         private System.Windows.Forms.Button SupplierButton;
         private System.Windows.Forms.Panel StockSubPanel;
         private System.Windows.Forms.Button StockAdjustmentButton;
-        private System.Windows.Forms.Button StockEntryButton;
         private System.Windows.Forms.Panel ProductSubPanel;
         private System.Windows.Forms.Button BrandButton;
         private System.Windows.Forms.Button CatergoryButton;
@@ -513,16 +550,18 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button LogOutButton;
         private System.Windows.Forms.Panel SettingsSubPanel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button StoreButton;
+        private System.Windows.Forms.Button UserButton;
         private System.Windows.Forms.Button ProductListButton;
         private System.Windows.Forms.Button ProductButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Panel FIlesSubPanel;
         private System.Windows.Forms.Button PosRecord;
         private System.Windows.Forms.Button SalesHistoryButton;
         private System.Windows.Forms.Button FilesButton;
         private System.Windows.Forms.Button StockButton;
+        private System.Windows.Forms.Button StockEntryButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
