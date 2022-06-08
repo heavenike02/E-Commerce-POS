@@ -52,28 +52,36 @@ namespace E_Commerce_POS
         private void DGVBrand_CellContentClick(object sender, DataGridViewCellEventArgs e)
         { // for update and delete brand by cell click from tbBrand
             string colName = DGVBrand.Columns[e.ColumnIndex].Name;
-            if ( colName == "Edit")
-            {
-                if (MessageBox.Show("Are you sure you want to delEte this record?","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    conn.Open();
-                    cmd = new SqlCommand("DELETE FROM tbBrand WHERE id LIKE ' " + DGVBrand[1,e.RowIndex].Value.ToString()+ "'",conn);
-                    cmd.ExecuteNonQuery();  
-                    conn.Close();
-                    MessageBox.Show("Brand has been sucessfully deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (colName == "Edit")
+            if (colName == "Edit1")
                 {
                     BrandModule brandModule = new BrandModule(this);
                     brandModule.IDLabel.Text = DGVBrand[1,e.RowIndex].Value.ToString();
                     brandModule.BrandNameTextbox.Text = DGVBrand[2,e.RowIndex].Value.ToString();    
                     brandModule.SaveButton.Enabled = false;
                     brandModule.UpdateButton.Enabled = true;
-
                     brandModule.ShowDialog();
+                 }
+                
+            if ( colName == "Delete")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("DELETE FROM tbBrand WHERE id LIKE '" + DGVBrand[1,e.RowIndex].Value.ToString()+ "'",conn);
+                    cmd.ExecuteNonQuery();  
+                    conn.Close();
+                    MessageBox.Show("Brand has been sucessfully deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                LoadBrand();
+                
             }
+            LoadBrand();
+
+        }
+
+       
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

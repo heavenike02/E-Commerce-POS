@@ -51,14 +51,13 @@
             this.ProductButton = new System.Windows.Forms.Button();
             this.DashBoardButton = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.UserName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelTitle = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.MainBody = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SidebarPanel.SuspendLayout();
             this.SettingsSubPanel.SuspendLayout();
             this.FIlesSubPanel.SuspendLayout();
@@ -67,7 +66,6 @@
             this.PanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // SidebarPanel
@@ -93,7 +91,7 @@
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LogOutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LogOutButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.ForeColor = System.Drawing.Color.White;
@@ -419,6 +417,13 @@
             this.PanelLogo.Size = new System.Drawing.Size(249, 127);
             this.PanelLogo.TabIndex = 0;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(190, 111);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 13;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -453,34 +458,22 @@
             // 
             // PanelTitle
             // 
-            this.PanelTitle.Controls.Add(this.pictureBox2);
-            this.PanelTitle.Controls.Add(this.label1);
+            this.PanelTitle.Controls.Add(this.TitleLabel);
             this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitle.Location = new System.Drawing.Point(270, 0);
             this.PanelTitle.Name = "PanelTitle";
             this.PanelTitle.Size = new System.Drawing.Size(864, 55);
             this.PanelTitle.TabIndex = 1;
             // 
-            // pictureBox2
+            // TitleLabel
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(530, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Californian FB", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(276, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 43);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Legacy Automotive\'s ";
+            this.TitleLabel.Font = new System.Drawing.Font("Californian FB", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.TitleLabel.Location = new System.Drawing.Point(276, 9);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(258, 43);
+            this.TitleLabel.TabIndex = 1;
+            this.TitleLabel.Text = "Legacy Automotive\'s ";
             // 
             // MainBody
             // 
@@ -491,14 +484,6 @@
             this.MainBody.Name = "MainBody";
             this.MainBody.Size = new System.Drawing.Size(864, 606);
             this.MainBody.TabIndex = 2;
-//            this.MainBody.Paint += new System.Windows.Forms.PaintEventHandler(this.MainBody_Paint);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(190, 111);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
-            this.flowLayoutPanel1.TabIndex = 13;
             // 
             // MainForm
             // 
@@ -525,7 +510,6 @@
             this.PanelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,8 +530,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label UserName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Button LogOutButton;
         private System.Windows.Forms.Panel SettingsSubPanel;
         private System.Windows.Forms.Button StoreButton;

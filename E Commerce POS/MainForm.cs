@@ -20,10 +20,10 @@ namespace E_Commerce_POS
         public MainForm()
         {
             InitializeComponent();
-           StartBlankDesign();
+            StartBlankDesign();
             conn = new SqlConnection(dbcon.myConnection());
             conn.Open();
-        
+
 
         }
         #region SidebarPanel
@@ -37,16 +37,16 @@ namespace E_Commerce_POS
 
         }
 
-        private void HideSubPanel() 
-        { 
+        private void HideSubPanel()
+        {
             if (FIlesSubPanel.Visible == true)
                 FIlesSubPanel.Visible = false;
 
             if (ProductSubPanel.Visible == true)
-                ProductSubPanel.Visible = false; 
+                ProductSubPanel.Visible = false;
 
             if (SettingsSubPanel.Visible == true)
-                SettingsSubPanel.Visible = false; 
+                SettingsSubPanel.Visible = false;
 
             if (StockSubPanel.Visible == true)
                 StockSubPanel.Visible = false;
@@ -54,18 +54,36 @@ namespace E_Commerce_POS
 
         private void ShowSubMenu(Panel Submenu)
         {
-            if (Submenu.Visible == false) 
-            { 
+            if (Submenu.Visible == false)
+            {
 
                 HideSubPanel();
                 Submenu.Visible = true;
             }
             else
                 Submenu.Visible = false;
-            
+
         }
 
         #endregion SidebarPanel
+
+        private Form ActiveForm = null;
+        // to open children form cnnected to the main application 
+        public void OpenChildFord(Form ChildForm)
+            
+        {
+            if (ActiveForm != null)
+                ActiveForm.Close();
+                ActiveForm = ChildForm;
+                ChildForm.TopLevel = false;
+                ChildForm.FormBorderStyle = FormBorderStyle.None;
+                ChildForm.Dock = DockStyle.Fill;
+                TitleLabel.Text = ChildForm.Text;
+            MainBody.Controls.Add(ChildForm);
+            MainBody.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();   
+        }
 
         private void DashBoardButton_Click(object sender, EventArgs e)
         {
@@ -84,11 +102,14 @@ namespace E_Commerce_POS
 
         private void BrandButton_Click(object sender, EventArgs e)
         {
+            OpenChildFord(new BrandForm()); 
             HideSubPanel();
         }
 
         private void CatergoryButton_Click(object sender, EventArgs e)
         {
+
+            OpenChildFord(new CategoryForm()); 
             HideSubPanel();
         }
 
