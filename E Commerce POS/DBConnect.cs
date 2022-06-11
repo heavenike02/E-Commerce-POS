@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +9,10 @@ using System.Threading.Tasks;
 namespace E_Commerce_POS
 {
     internal class DBConnect
+
     {
+        SqlConnection conn = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
         private string con;
         public string myConnection() 
         {
@@ -15,6 +20,17 @@ namespace E_Commerce_POS
 
 
             return con;
+        }
+        public DataTable getTable(string qury)
+        {
+            conn.ConnectionString = myConnection();
+            cmd = new SqlCommand(qury,conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+
+
         }
     }
 }
