@@ -57,6 +57,8 @@
             this.MileageUpDown = new System.Windows.Forms.NumericUpDown();
             this.PriceUpDown = new System.Windows.Forms.NumericUpDown();
             this.RoadTaxUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TransmissionTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EngineSIzeUpDown)).BeginInit();
@@ -109,7 +111,7 @@
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton.Image = ((System.Drawing.Image)(resources.GetObject("CancelButton.Image")));
             this.CancelButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CancelButton.Location = new System.Drawing.Point(612, 270);
+            this.CancelButton.Location = new System.Drawing.Point(612, 287);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(69, 101);
@@ -126,7 +128,7 @@
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
             this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.UpdateButton.Location = new System.Drawing.Point(535, 270);
+            this.UpdateButton.Location = new System.Drawing.Point(535, 287);
             this.UpdateButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(71, 101);
@@ -153,7 +155,7 @@
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
             this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveButton.Location = new System.Drawing.Point(476, 281);
+            this.SaveButton.Location = new System.Drawing.Point(476, 298);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(53, 90);
@@ -293,7 +295,7 @@
             // 
             this.DescriptionTextBox.AcceptsReturn = true;
             this.DescriptionTextBox.AcceptsTab = true;
-            this.DescriptionTextBox.Location = new System.Drawing.Point(153, 279);
+            this.DescriptionTextBox.Location = new System.Drawing.Point(154, 304);
             this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.DescriptionTextBox.Multiline = true;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
@@ -305,7 +307,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 279);
+            this.label12.Location = new System.Drawing.Point(23, 304);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 22);
             this.label12.TabIndex = 40;
@@ -316,7 +318,7 @@
             this.CategoryComboBox.FormattingEnabled = true;
             this.CategoryComboBox.Location = new System.Drawing.Point(153, 74);
             this.CategoryComboBox.Name = "CategoryComboBox";
-            this.CategoryComboBox.Size = new System.Drawing.Size(136, 27);
+            this.CategoryComboBox.Size = new System.Drawing.Size(161, 27);
             this.CategoryComboBox.TabIndex = 41;
             // 
             // BrandComboBox
@@ -324,7 +326,7 @@
             this.BrandComboBox.FormattingEnabled = true;
             this.BrandComboBox.Location = new System.Drawing.Point(154, 117);
             this.BrandComboBox.Name = "BrandComboBox";
-            this.BrandComboBox.Size = new System.Drawing.Size(135, 27);
+            this.BrandComboBox.Size = new System.Drawing.Size(160, 27);
             this.BrandComboBox.TabIndex = 42;
             // 
             // EngineSIzeUpDown
@@ -406,11 +408,32 @@
             this.RoadTaxUpDown.Size = new System.Drawing.Size(120, 27);
             this.RoadTaxUpDown.TabIndex = 46;
             // 
+            // TransmissionTextBox
+            // 
+            this.TransmissionTextBox.Location = new System.Drawing.Point(153, 267);
+            this.TransmissionTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.TransmissionTextBox.Name = "TransmissionTextBox";
+            this.TransmissionTextBox.Size = new System.Drawing.Size(199, 27);
+            this.TransmissionTextBox.TabIndex = 47;
+            this.TransmissionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(23, 272);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(117, 22);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "Transmission:";
+            // 
             // ProductModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 372);
+            this.ClientSize = new System.Drawing.Size(703, 389);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.TransmissionTextBox);
             this.Controls.Add(this.RoadTaxUpDown);
             this.Controls.Add(this.PriceUpDown);
             this.Controls.Add(this.MileageUpDown);
@@ -478,11 +501,13 @@
         public System.Windows.Forms.TextBox FuelTypeTextBox;
         public System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox CategoryComboBox;
-        private System.Windows.Forms.ComboBox BrandComboBox;
-        private System.Windows.Forms.NumericUpDown EngineSIzeUpDown;
-        private System.Windows.Forms.NumericUpDown MileageUpDown;
-        private System.Windows.Forms.NumericUpDown PriceUpDown;
-        private System.Windows.Forms.NumericUpDown RoadTaxUpDown;
+        public System.Windows.Forms.TextBox TransmissionTextBox;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.ComboBox CategoryComboBox;
+        public System.Windows.Forms.ComboBox BrandComboBox;
+        public System.Windows.Forms.NumericUpDown EngineSIzeUpDown;
+        public System.Windows.Forms.NumericUpDown MileageUpDown;
+        public System.Windows.Forms.NumericUpDown PriceUpDown;
+        public System.Windows.Forms.NumericUpDown RoadTaxUpDown;
     }
 }

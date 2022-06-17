@@ -16,7 +16,7 @@ namespace E_Commerce_POS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductModule());
+            Application.Run(new MainForm ());
         }
     }
 }

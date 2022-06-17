@@ -97,6 +97,7 @@ namespace E_Commerce_POS
 
         private void ProductListButton_Click(object sender, EventArgs e)
         {
+            OpenChildFord(new Product());
             HideSubPanel();
         }
 

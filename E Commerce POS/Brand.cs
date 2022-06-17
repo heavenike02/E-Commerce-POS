@@ -46,6 +46,8 @@ namespace E_Commerce_POS
         private void AddButton_Click(object sender, EventArgs e)
         {
             BrandModule moduleForm = new BrandModule(this);
+            moduleForm.SaveButton.Enabled = true;
+            moduleForm.UpdateButton.Enabled = false;
             moduleForm.ShowDialog();
         }
 
@@ -80,9 +82,7 @@ namespace E_Commerce_POS
 
        
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
+    

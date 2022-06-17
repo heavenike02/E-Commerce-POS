@@ -51,7 +51,10 @@ namespace E_Commerce_POS
         private void AddButton_Click(object sender, EventArgs e)
         {
             CategoryModule moduleForm = new CategoryModule(this);
+            moduleForm.UpdateButton.Enabled = false;
             moduleForm.ShowDialog();
+            moduleForm.SaveButton.Enabled  = true;
+            
 
         }
 
@@ -61,6 +64,7 @@ namespace E_Commerce_POS
             string colName = DGVCatergory.Columns[e.ColumnIndex].Name;
             if (colName == "Edit1")
             {
+                
                 CategoryModule module = new CategoryModule(this);
                 module.IDLabel.Text = DGVCatergory[1, e.RowIndex].Value.ToString();
                 module.CategoryNameTextbox.Text = DGVCatergory[2, e.RowIndex].Value.ToString();
@@ -71,8 +75,9 @@ namespace E_Commerce_POS
 
             if (colName == "Delete")
             {
+
                 if (MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
+                { 
                     conn.Open();
                     cmd = new SqlCommand("DELETE FROM tbCatergory WHERE Id LIKE '" + DGVCatergory[1, e.RowIndex].Value.ToString() + "'", conn);
                     cmd.ExecuteNonQuery();
