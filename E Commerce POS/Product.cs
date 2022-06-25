@@ -29,21 +29,21 @@ namespace E_Commerce_POS
         {
             try
             {
-                int i = 0;
+                
                 DGVProduct.Rows.Clear();
                 // cmd = new SqlCommand("SELECT  p.model,p.reg,p.trim,p.price,p.fueltype,p.enginesize,p.mileage,p.roadtax,p.description ", conn);
-                cmd = new SqlCommand("SELECT * FROM tbProduc ORDER BY  bid,cid,model,reg,trim,price,fueltype,enginesize,mileage,transmission,roadtax,description", conn);
-                conn.Open();
+                cmd = new SqlCommand("SELECT * FROM tbProduc WHERE reg LIKE '%" + SearchTextBox.Text + "%' OR bid LIKE '%" + SearchTextBox.Text + "%' OR model LIKE '%" + SearchTextBox.Text + "%' OR cid LIKE '%" + SearchTextBox.Text + "%' OR bid LIKE '%" + SearchTextBox.Text + "%'",  conn);
+                conn.Open();                                             // OR ID LIKE '%" + txt_SearchBar.Text + "%'
+                //ORDER BY bid,cid,model,reg,trim,price,fueltype,enginesize,mileage,transmission,roadtax,description
 
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    
-                    //DGVProduct.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
-                  DGVProduct.Rows.Add( dr["Id"].ToString(), dr["cid"].ToString(), dr["bid"].ToString(), dr["model"].ToString(), dr["reg"].ToString(), dr["trim"].ToString(), dr["price"].ToString(), dr["fueltype"].ToString(), dr["enginesize"].ToString(), dr["mileage"].ToString(), dr["transmission"].ToString(), dr["roadtax"].ToString(), dr["description"].ToString());
+
+                    DGVProduct.Rows.Add(dr["Id"].ToString(), dr["cid"].ToString(), dr["bid"].ToString(), dr["model"].ToString(), dr["reg"].ToString(), dr["trim"].ToString(), dr["price"].ToString(), dr["fueltype"].ToString(), dr["enginesize"].ToString(), dr["mileage"].ToString(), dr["transmission"].ToString(), dr["roadtax"].ToString(), dr["description"].ToString());
                 }
                 dr.Close();
-                    conn.Close();
+                conn.Close();
             }
 
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace E_Commerce_POS
 
         }
 
-      
+
 
 
 
@@ -80,7 +80,7 @@ namespace E_Commerce_POS
                 productModule.PriceUpDown.Text = DGVProduct.Rows[e.RowIndex].Cells[6].Value.ToString();
                 productModule.FuelTypeTextBox.Text = DGVProduct.Rows[e.RowIndex].Cells[7].Value.ToString();
                 productModule.EngineSIzeUpDown.Text = DGVProduct.Rows[e.RowIndex].Cells[8].Value.ToString();
-                productModule.MileageUpDown.Text =  DGVProduct.Rows[e.RowIndex].Cells[9].Value.ToString();
+                productModule.MileageUpDown.Text = DGVProduct.Rows[e.RowIndex].Cells[9].Value.ToString();
                 productModule.TransmissionTextBox.Text = DGVProduct.Rows[e.RowIndex].Cells[10].Value.ToString();
                 productModule.RoadTaxUpDown.Text = DGVProduct.Rows[e.RowIndex].Cells[11].Value.ToString();
                 productModule.DescriptionTextBox.Text = DGVProduct.Rows[e.RowIndex].Cells[12].Value.ToString();
@@ -107,5 +107,20 @@ namespace E_Commerce_POS
             LoadProduct();
 
         }
-    }
+
+       
+             private void SearchButton_Click(object sender, EventArgs e)
+                {
+                    
+                       
+     
+       
+                }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadProduct();
+
+        }
+    } 
 }
