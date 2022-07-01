@@ -161,6 +161,7 @@ namespace E_Commerce_POS
 
         private void SupplierButton_Click(object sender, EventArgs e)
         {
+            OpenChildFord(new Supplier ());
             HideSubPanel();
         }
 

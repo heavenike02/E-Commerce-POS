@@ -32,10 +32,8 @@ namespace E_Commerce_POS
                 
                 DGVProduct.Rows.Clear();
                 // cmd = new SqlCommand("SELECT  p.model,p.reg,p.trim,p.price,p.fueltype,p.enginesize,p.mileage,p.roadtax,p.description ", conn);
-                cmd = new SqlCommand("SELECT * FROM tbProduc WHERE reg LIKE '%" + SearchTextBox.Text + "%' OR bid LIKE '%" + SearchTextBox.Text + "%' OR model LIKE '%" + SearchTextBox.Text + "%' OR cid LIKE '%" + SearchTextBox.Text + "%' OR bid LIKE '%" + SearchTextBox.Text + "%'",  conn);
-                conn.Open();                                             // OR ID LIKE '%" + txt_SearchBar.Text + "%'
-                //ORDER BY bid,cid,model,reg,trim,price,fueltype,enginesize,mileage,transmission,roadtax,description
-
+                cmd = new SqlCommand("SELECT * FROM tbProduc WHERE reg LIKE '%" + SearchMetroTextBox.Text + "%' OR bid LIKE '%" + SearchMetroTextBox.Text + "%' OR model LIKE '%" + SearchMetroTextBox.Text + "%' OR cid LIKE '%" + SearchMetroTextBox.Text + "%' OR bid LIKE '%" + SearchMetroTextBox.Text + "%'",  conn);
+                conn.Open();
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -97,7 +95,7 @@ namespace E_Commerce_POS
                 if (MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     conn.Open();
-                    cmd = new SqlCommand("DELETE FROM tbProduc WHERE reg LIKE '" + DGVProduct[4, e.RowIndex].Value.ToString() + "'", conn);
+                    cmd = new SqlCommand("DELETE FROM tbProduc WHERE reg LIKE '" + DGVProduct[1, e.RowIndex].Value.ToString() + "'", conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Car has been sucessfully deleted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,18 +107,13 @@ namespace E_Commerce_POS
         }
 
        
-             private void SearchButton_Click(object sender, EventArgs e)
-                {
-                    
-                       
-     
-       
-                }
+            
 
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+      
+
+        private void SearchMetroTextBox_TextChanged(object sender, EventArgs e)
         {
             LoadProduct();
-
         }
     } 
 }

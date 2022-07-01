@@ -59,6 +59,7 @@
             this.RoadTaxUpDown = new System.Windows.Forms.NumericUpDown();
             this.TransmissionTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.IDLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EngineSIzeUpDown)).BeginInit();
@@ -74,7 +75,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 22);
+            this.label1.Size = new System.Drawing.Size(90, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Car Details ";
             // 
@@ -144,7 +145,7 @@
             this.label2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 22);
+            this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.TabIndex = 18;
             this.label2.Text = "Category:";
             // 
@@ -171,7 +172,7 @@
             this.label3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(417, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 22);
+            this.label3.Size = new System.Drawing.Size(76, 18);
             this.label3.TabIndex = 21;
             this.label3.Text = "Fuel Type:";
             // 
@@ -181,7 +182,7 @@
             this.label4.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(417, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 22);
+            this.label4.Size = new System.Drawing.Size(44, 18);
             this.label4.TabIndex = 22;
             this.label4.Text = "Price:";
             // 
@@ -191,7 +192,7 @@
             this.label5.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(23, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 22);
+            this.label5.Size = new System.Drawing.Size(88, 18);
             this.label5.TabIndex = 23;
             this.label5.Text = "Registration:";
             // 
@@ -201,7 +202,7 @@
             this.label6.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(23, 161);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 22);
+            this.label6.Size = new System.Drawing.Size(52, 18);
             this.label6.TabIndex = 24;
             this.label6.Text = "Model:";
             // 
@@ -211,7 +212,7 @@
             this.label7.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(23, 117);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 22);
+            this.label7.Size = new System.Drawing.Size(47, 18);
             this.label7.TabIndex = 25;
             this.label7.Text = "Make:";
             // 
@@ -221,7 +222,7 @@
             this.label8.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(23, 235);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 22);
+            this.label8.Size = new System.Drawing.Size(43, 18);
             this.label8.TabIndex = 26;
             this.label8.Text = "Trim:";
             // 
@@ -231,7 +232,7 @@
             this.label9.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(417, 116);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 22);
+            this.label9.Size = new System.Drawing.Size(100, 18);
             this.label9.TabIndex = 27;
             this.label9.Text = "Mileage (KM):";
             // 
@@ -241,7 +242,7 @@
             this.label10.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(417, 79);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 22);
+            this.label10.Size = new System.Drawing.Size(110, 18);
             this.label10.TabIndex = 28;
             this.label10.Text = "Engine Size (L):";
             // 
@@ -251,7 +252,7 @@
             this.label11.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(417, 200);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 22);
+            this.label11.Size = new System.Drawing.Size(73, 18);
             this.label11.TabIndex = 29;
             this.label11.Text = "Road Tax:";
             // 
@@ -260,7 +261,7 @@
             this.ModelTextBox.Location = new System.Drawing.Point(154, 156);
             this.ModelTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ModelTextBox.Name = "ModelTextBox";
-            this.ModelTextBox.Size = new System.Drawing.Size(199, 27);
+            this.ModelTextBox.Size = new System.Drawing.Size(199, 23);
             this.ModelTextBox.TabIndex = 31;
             this.ModelTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -269,7 +270,7 @@
             this.RegTextBox.Location = new System.Drawing.Point(154, 193);
             this.RegTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.RegTextBox.Name = "RegTextBox";
-            this.RegTextBox.Size = new System.Drawing.Size(199, 27);
+            this.RegTextBox.Size = new System.Drawing.Size(199, 23);
             this.RegTextBox.TabIndex = 32;
             this.RegTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -278,7 +279,7 @@
             this.TrimTextBox.Location = new System.Drawing.Point(154, 230);
             this.TrimTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.TrimTextBox.Name = "TrimTextBox";
-            this.TrimTextBox.Size = new System.Drawing.Size(199, 27);
+            this.TrimTextBox.Size = new System.Drawing.Size(199, 23);
             this.TrimTextBox.TabIndex = 33;
             this.TrimTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -287,7 +288,7 @@
             this.FuelTypeTextBox.Location = new System.Drawing.Point(561, 235);
             this.FuelTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.FuelTypeTextBox.Name = "FuelTypeTextBox";
-            this.FuelTypeTextBox.Size = new System.Drawing.Size(120, 27);
+            this.FuelTypeTextBox.Size = new System.Drawing.Size(120, 23);
             this.FuelTypeTextBox.TabIndex = 38;
             this.FuelTypeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -309,7 +310,7 @@
             this.label12.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(23, 304);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 22);
+            this.label12.Size = new System.Drawing.Size(82, 18);
             this.label12.TabIndex = 40;
             this.label12.Text = "Description";
             // 
@@ -318,7 +319,7 @@
             this.CategoryComboBox.FormattingEnabled = true;
             this.CategoryComboBox.Location = new System.Drawing.Point(153, 74);
             this.CategoryComboBox.Name = "CategoryComboBox";
-            this.CategoryComboBox.Size = new System.Drawing.Size(161, 27);
+            this.CategoryComboBox.Size = new System.Drawing.Size(161, 24);
             this.CategoryComboBox.TabIndex = 41;
             // 
             // BrandComboBox
@@ -326,7 +327,7 @@
             this.BrandComboBox.FormattingEnabled = true;
             this.BrandComboBox.Location = new System.Drawing.Point(154, 117);
             this.BrandComboBox.Name = "BrandComboBox";
-            this.BrandComboBox.Size = new System.Drawing.Size(160, 27);
+            this.BrandComboBox.Size = new System.Drawing.Size(160, 24);
             this.BrandComboBox.TabIndex = 42;
             // 
             // EngineSIzeUpDown
@@ -349,7 +350,7 @@
             0,
             65536});
             this.EngineSIzeUpDown.Name = "EngineSIzeUpDown";
-            this.EngineSIzeUpDown.Size = new System.Drawing.Size(120, 27);
+            this.EngineSIzeUpDown.Size = new System.Drawing.Size(120, 23);
             this.EngineSIzeUpDown.TabIndex = 43;
             this.EngineSIzeUpDown.Value = new decimal(new int[] {
             5,
@@ -371,7 +372,7 @@
             0,
             0});
             this.MileageUpDown.Name = "MileageUpDown";
-            this.MileageUpDown.Size = new System.Drawing.Size(120, 27);
+            this.MileageUpDown.Size = new System.Drawing.Size(120, 23);
             this.MileageUpDown.TabIndex = 44;
             // 
             // PriceUpDown
@@ -388,7 +389,7 @@
             0,
             0});
             this.PriceUpDown.Name = "PriceUpDown";
-            this.PriceUpDown.Size = new System.Drawing.Size(120, 27);
+            this.PriceUpDown.Size = new System.Drawing.Size(120, 23);
             this.PriceUpDown.TabIndex = 45;
             // 
             // RoadTaxUpDown
@@ -405,7 +406,7 @@
             0,
             0});
             this.RoadTaxUpDown.Name = "RoadTaxUpDown";
-            this.RoadTaxUpDown.Size = new System.Drawing.Size(120, 27);
+            this.RoadTaxUpDown.Size = new System.Drawing.Size(120, 23);
             this.RoadTaxUpDown.TabIndex = 46;
             // 
             // TransmissionTextBox
@@ -413,7 +414,7 @@
             this.TransmissionTextBox.Location = new System.Drawing.Point(153, 267);
             this.TransmissionTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.TransmissionTextBox.Name = "TransmissionTextBox";
-            this.TransmissionTextBox.Size = new System.Drawing.Size(199, 27);
+            this.TransmissionTextBox.Size = new System.Drawing.Size(199, 23);
             this.TransmissionTextBox.TabIndex = 47;
             this.TransmissionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -423,15 +424,24 @@
             this.label13.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(23, 272);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 22);
+            this.label13.Size = new System.Drawing.Size(96, 18);
             this.label13.TabIndex = 48;
             this.label13.Text = "Transmission:";
             // 
+            // IDLabel
+            // 
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Location = new System.Drawing.Point(417, 274);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(0, 16);
+            this.IDLabel.TabIndex = 49;
+            // 
             // ProductModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 389);
+            this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.TransmissionTextBox);
             this.Controls.Add(this.RoadTaxUpDown);
@@ -509,5 +519,6 @@
         public System.Windows.Forms.NumericUpDown MileageUpDown;
         public System.Windows.Forms.NumericUpDown PriceUpDown;
         public System.Windows.Forms.NumericUpDown RoadTaxUpDown;
+        private System.Windows.Forms.Label IDLabel;
     }
 }

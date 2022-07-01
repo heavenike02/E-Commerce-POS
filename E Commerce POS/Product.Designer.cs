@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
             this.FooterPanel = new System.Windows.Forms.Panel();
-            this.SearchButton = new System.Windows.Forms.Button();
+            this.SearchMetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.DGVProduct = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +51,6 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.FooterPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProduct)).BeginInit();
             this.SuspendLayout();
@@ -87,8 +86,7 @@
             // FooterPanel
             // 
             this.FooterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            this.FooterPanel.Controls.Add(this.SearchTextBox);
-            this.FooterPanel.Controls.Add(this.SearchButton);
+            this.FooterPanel.Controls.Add(this.SearchMetroTextBox);
             this.FooterPanel.Controls.Add(this.AddButton);
             this.FooterPanel.Controls.Add(this.label1);
             this.FooterPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -97,29 +95,56 @@
             this.FooterPanel.Size = new System.Drawing.Size(1183, 100);
             this.FooterPanel.TabIndex = 2;
             // 
-            // SearchButton
+            // SearchMetroTextBox
             // 
-            this.SearchButton.Location = new System.Drawing.Point(621, 39);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(75, 30);
-            this.SearchButton.TabIndex = 3;
-            this.SearchButton.Text = "Search";
-            this.SearchButton.UseVisualStyleBackColor = true;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
+            // 
+            // 
+            this.SearchMetroTextBox.CustomButton.Image = null;
+            this.SearchMetroTextBox.CustomButton.Location = new System.Drawing.Point(392, 2);
+            this.SearchMetroTextBox.CustomButton.Name = "";
+            this.SearchMetroTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.SearchMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.SearchMetroTextBox.CustomButton.TabIndex = 1;
+            this.SearchMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.SearchMetroTextBox.CustomButton.UseSelectable = true;
+            this.SearchMetroTextBox.CustomButton.Visible = false;
+            this.SearchMetroTextBox.DisplayIcon = true;
+            this.SearchMetroTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.SearchMetroTextBox.Icon = ((System.Drawing.Image)(resources.GetObject("SearchMetroTextBox.Icon")));
+            this.SearchMetroTextBox.Lines = new string[0];
+            this.SearchMetroTextBox.Location = new System.Drawing.Point(223, 42);
+            this.SearchMetroTextBox.MaxLength = 32767;
+            this.SearchMetroTextBox.Multiline = true;
+            this.SearchMetroTextBox.Name = "SearchMetroTextBox";
+            this.SearchMetroTextBox.PasswordChar = '\0';
+            this.SearchMetroTextBox.PromptText = "Search";
+            this.SearchMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.SearchMetroTextBox.SelectedText = "";
+            this.SearchMetroTextBox.SelectionLength = 0;
+            this.SearchMetroTextBox.SelectionStart = 0;
+            this.SearchMetroTextBox.ShortcutsEnabled = true;
+            this.SearchMetroTextBox.Size = new System.Drawing.Size(418, 28);
+            this.SearchMetroTextBox.TabIndex = 4;
+            this.SearchMetroTextBox.UseSelectable = true;
+            this.SearchMetroTextBox.WaterMark = "Search";
+            this.SearchMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.SearchMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.SearchMetroTextBox.TextChanged += new System.EventHandler(this.SearchMetroTextBox_TextChanged);
             // 
             // DGVProduct
             // 
             this.DGVProduct.AllowUserToAddRows = false;
             this.DGVProduct.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DGVProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -137,14 +162,14 @@
             this.Column13,
             this.Edit1,
             this.Delete});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVProduct.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVProduct.EnableHeadersVisualStyles = false;
             this.DGVProduct.Location = new System.Drawing.Point(0, 0);
@@ -276,15 +301,6 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 6;
             // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.Location = new System.Drawing.Point(223, 39);
-            this.SearchTextBox.Multiline = true;
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(349, 30);
-            this.SearchTextBox.TabIndex = 3;
-            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
-            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -295,9 +311,8 @@
             this.Font = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Product";
-            this.Text = "Product";
+            this.Text = "ProductForm";
             this.FooterPanel.ResumeLayout(false);
-            this.FooterPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProduct)).EndInit();
             this.ResumeLayout(false);
 
@@ -324,7 +339,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewImageColumn Edit1;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.TextBox SearchTextBox;
+        private MetroFramework.Controls.MetroTextBox SearchMetroTextBox;
     }
 }

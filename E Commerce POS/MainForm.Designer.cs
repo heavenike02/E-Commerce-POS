@@ -99,7 +99,7 @@
             this.LogOutButton.Location = new System.Drawing.Point(0, 733);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.LogOutButton.Size = new System.Drawing.Size(249, 39);
+            this.LogOutButton.Size = new System.Drawing.Size(253, 39);
             this.LogOutButton.TabIndex = 11;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,9 +116,9 @@
             this.SupplierButton.Location = new System.Drawing.Point(0, 697);
             this.SupplierButton.Name = "SupplierButton";
             this.SupplierButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.SupplierButton.Size = new System.Drawing.Size(249, 36);
+            this.SupplierButton.Size = new System.Drawing.Size(253, 36);
             this.SupplierButton.TabIndex = 9;
-            this.SupplierButton.Text = "Suppiler";
+            this.SupplierButton.Text = "Supplier";
             this.SupplierButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SupplierButton.UseVisualStyleBackColor = true;
             this.SupplierButton.Click += new System.EventHandler(this.SupplierButton_Click);
@@ -133,7 +133,7 @@
             this.SettingsSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.SettingsSubPanel.Location = new System.Drawing.Point(0, 614);
             this.SettingsSubPanel.Name = "SettingsSubPanel";
-            this.SettingsSubPanel.Size = new System.Drawing.Size(249, 83);
+            this.SettingsSubPanel.Size = new System.Drawing.Size(253, 83);
             this.SettingsSubPanel.TabIndex = 13;
             // 
             // StoreButton
@@ -145,7 +145,7 @@
             this.StoreButton.Location = new System.Drawing.Point(0, 39);
             this.StoreButton.Name = "StoreButton";
             this.StoreButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.StoreButton.Size = new System.Drawing.Size(247, 39);
+            this.StoreButton.Size = new System.Drawing.Size(251, 39);
             this.StoreButton.TabIndex = 4;
             this.StoreButton.Text = "Store";
             this.StoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,7 +161,7 @@
             this.UserButton.Location = new System.Drawing.Point(0, 0);
             this.UserButton.Name = "UserButton";
             this.UserButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.UserButton.Size = new System.Drawing.Size(247, 39);
+            this.UserButton.Size = new System.Drawing.Size(251, 39);
             this.UserButton.TabIndex = 3;
             this.UserButton.Text = "User";
             this.UserButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -178,7 +178,7 @@
             this.SettingsButton.Location = new System.Drawing.Point(0, 575);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.SettingsButton.Size = new System.Drawing.Size(249, 39);
+            this.SettingsButton.Size = new System.Drawing.Size(253, 39);
             this.SettingsButton.TabIndex = 16;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,7 +195,7 @@
             this.FIlesSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FIlesSubPanel.Location = new System.Drawing.Point(0, 499);
             this.FIlesSubPanel.Name = "FIlesSubPanel";
-            this.FIlesSubPanel.Size = new System.Drawing.Size(249, 76);
+            this.FIlesSubPanel.Size = new System.Drawing.Size(253, 76);
             this.FIlesSubPanel.TabIndex = 14;
             // 
             // PosRecord
@@ -207,7 +207,7 @@
             this.PosRecord.Location = new System.Drawing.Point(0, 39);
             this.PosRecord.Name = "PosRecord";
             this.PosRecord.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.PosRecord.Size = new System.Drawing.Size(247, 39);
+            this.PosRecord.Size = new System.Drawing.Size(251, 39);
             this.PosRecord.TabIndex = 4;
             this.PosRecord.Text = "POS Record";
             this.PosRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,7 +223,7 @@
             this.SalesHistoryButton.Location = new System.Drawing.Point(0, 0);
             this.SalesHistoryButton.Name = "SalesHistoryButton";
             this.SalesHistoryButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.SalesHistoryButton.Size = new System.Drawing.Size(247, 39);
+            this.SalesHistoryButton.Size = new System.Drawing.Size(251, 39);
             this.SalesHistoryButton.TabIndex = 3;
             this.SalesHistoryButton.Text = "Sales History";
             this.SalesHistoryButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -240,7 +240,7 @@
             this.FilesButton.Location = new System.Drawing.Point(0, 460);
             this.FilesButton.Name = "FilesButton";
             this.FilesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.FilesButton.Size = new System.Drawing.Size(249, 39);
+            this.FilesButton.Size = new System.Drawing.Size(253, 39);
             this.FilesButton.TabIndex = 15;
             this.FilesButton.Text = "FIles";
             this.FilesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -257,7 +257,7 @@
             this.StockSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.StockSubPanel.Location = new System.Drawing.Point(0, 375);
             this.StockSubPanel.Name = "StockSubPanel";
-            this.StockSubPanel.Size = new System.Drawing.Size(249, 85);
+            this.StockSubPanel.Size = new System.Drawing.Size(253, 85);
             this.StockSubPanel.TabIndex = 7;
             // 
             // StockAdjustmentButton
@@ -269,7 +269,7 @@
             this.StockAdjustmentButton.Location = new System.Drawing.Point(0, 39);
             this.StockAdjustmentButton.Name = "StockAdjustmentButton";
             this.StockAdjustmentButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.StockAdjustmentButton.Size = new System.Drawing.Size(247, 39);
+            this.StockAdjustmentButton.Size = new System.Drawing.Size(251, 39);
             this.StockAdjustmentButton.TabIndex = 4;
             this.StockAdjustmentButton.Text = "Stock Adjustment";
             this.StockAdjustmentButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,7 +285,7 @@
             this.StockEntryButton.Location = new System.Drawing.Point(0, 0);
             this.StockEntryButton.Name = "StockEntryButton";
             this.StockEntryButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.StockEntryButton.Size = new System.Drawing.Size(247, 39);
+            this.StockEntryButton.Size = new System.Drawing.Size(251, 39);
             this.StockEntryButton.TabIndex = 3;
             this.StockEntryButton.Text = "Stock Entry";
             this.StockEntryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,7 +302,7 @@
             this.StockButton.Location = new System.Drawing.Point(0, 336);
             this.StockButton.Name = "StockButton";
             this.StockButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.StockButton.Size = new System.Drawing.Size(249, 39);
+            this.StockButton.Size = new System.Drawing.Size(253, 39);
             this.StockButton.TabIndex = 14;
             this.StockButton.Text = "Stock";
             this.StockButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,7 +320,7 @@
             this.ProductSubPanel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ProductSubPanel.Location = new System.Drawing.Point(0, 210);
             this.ProductSubPanel.Name = "ProductSubPanel";
-            this.ProductSubPanel.Size = new System.Drawing.Size(249, 126);
+            this.ProductSubPanel.Size = new System.Drawing.Size(253, 126);
             this.ProductSubPanel.TabIndex = 0;
             // 
             // CatergoryButton
@@ -332,7 +332,7 @@
             this.CatergoryButton.Location = new System.Drawing.Point(0, 78);
             this.CatergoryButton.Name = "CatergoryButton";
             this.CatergoryButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.CatergoryButton.Size = new System.Drawing.Size(247, 37);
+            this.CatergoryButton.Size = new System.Drawing.Size(251, 37);
             this.CatergoryButton.TabIndex = 4;
             this.CatergoryButton.Text = "Category";
             this.CatergoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,7 +348,7 @@
             this.BrandButton.Location = new System.Drawing.Point(0, 39);
             this.BrandButton.Name = "BrandButton";
             this.BrandButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.BrandButton.Size = new System.Drawing.Size(247, 39);
+            this.BrandButton.Size = new System.Drawing.Size(251, 39);
             this.BrandButton.TabIndex = 6;
             this.BrandButton.Text = "Brand";
             this.BrandButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -364,7 +364,7 @@
             this.ProductListButton.Location = new System.Drawing.Point(0, 0);
             this.ProductListButton.Name = "ProductListButton";
             this.ProductListButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.ProductListButton.Size = new System.Drawing.Size(247, 39);
+            this.ProductListButton.Size = new System.Drawing.Size(251, 39);
             this.ProductListButton.TabIndex = 3;
             this.ProductListButton.Text = "Product List";
             this.ProductListButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -381,7 +381,7 @@
             this.ProductButton.Location = new System.Drawing.Point(0, 166);
             this.ProductButton.Name = "ProductButton";
             this.ProductButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ProductButton.Size = new System.Drawing.Size(249, 44);
+            this.ProductButton.Size = new System.Drawing.Size(253, 44);
             this.ProductButton.TabIndex = 14;
             this.ProductButton.Text = "Product";
             this.ProductButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -398,7 +398,7 @@
             this.DashBoardButton.Location = new System.Drawing.Point(0, 127);
             this.DashBoardButton.Name = "DashBoardButton";
             this.DashBoardButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.DashBoardButton.Size = new System.Drawing.Size(249, 39);
+            this.DashBoardButton.Size = new System.Drawing.Size(253, 39);
             this.DashBoardButton.TabIndex = 1;
             this.DashBoardButton.Text = "Dashboard";
             this.DashBoardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -414,7 +414,7 @@
             this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(249, 127);
+            this.PanelLogo.Size = new System.Drawing.Size(253, 127);
             this.PanelLogo.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -430,7 +430,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(71, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 22);
+            this.label2.Size = new System.Drawing.Size(51, 18);
             this.label2.TabIndex = 12;
             this.label2.Text = "Admin";
             // 
@@ -440,7 +440,7 @@
             this.UserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.UserName.Location = new System.Drawing.Point(71, 77);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(87, 22);
+            this.UserName.Size = new System.Drawing.Size(71, 18);
             this.UserName.TabIndex = 0;
             this.UserName.Text = "Username";
             // 
@@ -487,7 +487,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1134, 661);
@@ -500,7 +500,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "MainForm";
             this.SidebarPanel.ResumeLayout(false);
             this.SettingsSubPanel.ResumeLayout(false);
             this.FIlesSubPanel.ResumeLayout(false);

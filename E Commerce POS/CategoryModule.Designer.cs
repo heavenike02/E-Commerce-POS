@@ -62,7 +62,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 22);
+            this.label1.Size = new System.Drawing.Size(128, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Category Module";
             // 
@@ -71,7 +71,7 @@
             this.IDLabel.AutoSize = true;
             this.IDLabel.Location = new System.Drawing.Point(18, 153);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(27, 19);
+            this.IDLabel.Size = new System.Drawing.Size(23, 16);
             this.IDLabel.TabIndex = 15;
             this.IDLabel.Text = "ID";
             // 
@@ -115,7 +115,7 @@
             this.label2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 22);
+            this.label2.Size = new System.Drawing.Size(110, 18);
             this.label2.TabIndex = 12;
             this.label2.Text = "Category Name:";
             // 
@@ -124,7 +124,7 @@
             this.CategoryNameTextbox.Location = new System.Drawing.Point(194, 67);
             this.CategoryNameTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CategoryNameTextbox.Name = "CategoryNameTextbox";
-            this.CategoryNameTextbox.Size = new System.Drawing.Size(519, 27);
+            this.CategoryNameTextbox.Size = new System.Drawing.Size(519, 23);
             this.CategoryNameTextbox.TabIndex = 10;
             // 
             // SaveButton
@@ -159,7 +159,7 @@
             // 
             // CategoryModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 225);
             this.Controls.Add(this.IDLabel);

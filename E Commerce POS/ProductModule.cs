@@ -58,7 +58,7 @@ namespace E_Commerce_POS
 
 
 
-
+                    
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
