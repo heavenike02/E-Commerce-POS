@@ -129,10 +129,10 @@
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
             this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.UpdateButton.Location = new System.Drawing.Point(535, 287);
+            this.UpdateButton.Location = new System.Drawing.Point(537, 287);
             this.UpdateButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(71, 101);
+            this.UpdateButton.Size = new System.Drawing.Size(69, 101);
             this.UpdateButton.TabIndex = 19;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -143,7 +143,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 79);
+            this.label2.Location = new System.Drawing.Point(34, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.TabIndex = 18;
@@ -156,10 +156,10 @@
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
             this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveButton.Location = new System.Drawing.Point(476, 298);
+            this.SaveButton.Location = new System.Drawing.Point(462, 298);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(53, 90);
+            this.SaveButton.Size = new System.Drawing.Size(69, 90);
             this.SaveButton.TabIndex = 17;
             this.SaveButton.Text = "Save";
             this.SaveButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -190,7 +190,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 198);
+            this.label5.Location = new System.Drawing.Point(34, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 18);
             this.label5.TabIndex = 23;
@@ -200,7 +200,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 161);
+            this.label6.Location = new System.Drawing.Point(34, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 18);
             this.label6.TabIndex = 24;
@@ -210,7 +210,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 117);
+            this.label7.Location = new System.Drawing.Point(34, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 18);
             this.label7.TabIndex = 25;
@@ -220,7 +220,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 235);
+            this.label8.Location = new System.Drawing.Point(34, 228);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 18);
             this.label8.TabIndex = 26;
@@ -258,7 +258,7 @@
             // 
             // ModelTextBox
             // 
-            this.ModelTextBox.Location = new System.Drawing.Point(154, 156);
+            this.ModelTextBox.Location = new System.Drawing.Point(153, 152);
             this.ModelTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ModelTextBox.Name = "ModelTextBox";
             this.ModelTextBox.Size = new System.Drawing.Size(199, 23);
@@ -267,7 +267,7 @@
             // 
             // RegTextBox
             // 
-            this.RegTextBox.Location = new System.Drawing.Point(154, 193);
+            this.RegTextBox.Location = new System.Drawing.Point(153, 190);
             this.RegTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.RegTextBox.Name = "RegTextBox";
             this.RegTextBox.Size = new System.Drawing.Size(199, 23);
@@ -276,7 +276,7 @@
             // 
             // TrimTextBox
             // 
-            this.TrimTextBox.Location = new System.Drawing.Point(154, 230);
+            this.TrimTextBox.Location = new System.Drawing.Point(153, 228);
             this.TrimTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.TrimTextBox.Name = "TrimTextBox";
             this.TrimTextBox.Size = new System.Drawing.Size(199, 23);
@@ -285,7 +285,7 @@
             // 
             // FuelTypeTextBox
             // 
-            this.FuelTypeTextBox.Location = new System.Drawing.Point(561, 235);
+            this.FuelTypeTextBox.Location = new System.Drawing.Point(561, 234);
             this.FuelTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.FuelTypeTextBox.Name = "FuelTypeTextBox";
             this.FuelTypeTextBox.Size = new System.Drawing.Size(120, 23);
@@ -296,7 +296,7 @@
             // 
             this.DescriptionTextBox.AcceptsReturn = true;
             this.DescriptionTextBox.AcceptsTab = true;
-            this.DescriptionTextBox.Location = new System.Drawing.Point(154, 304);
+            this.DescriptionTextBox.Location = new System.Drawing.Point(153, 304);
             this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.DescriptionTextBox.Multiline = true;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
@@ -308,7 +308,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 304);
+            this.label12.Location = new System.Drawing.Point(34, 304);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 18);
             this.label12.TabIndex = 40;
@@ -325,7 +325,7 @@
             // BrandComboBox
             // 
             this.BrandComboBox.FormattingEnabled = true;
-            this.BrandComboBox.Location = new System.Drawing.Point(154, 117);
+            this.BrandComboBox.Location = new System.Drawing.Point(153, 113);
             this.BrandComboBox.Name = "BrandComboBox";
             this.BrandComboBox.Size = new System.Drawing.Size(160, 24);
             this.BrandComboBox.TabIndex = 42;
@@ -365,7 +365,7 @@
             0,
             0,
             0});
-            this.MileageUpDown.Location = new System.Drawing.Point(561, 118);
+            this.MileageUpDown.Location = new System.Drawing.Point(561, 114);
             this.MileageUpDown.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -382,7 +382,7 @@
             0,
             0,
             0});
-            this.PriceUpDown.Location = new System.Drawing.Point(561, 161);
+            this.PriceUpDown.Location = new System.Drawing.Point(561, 154);
             this.PriceUpDown.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -399,7 +399,7 @@
             0,
             0,
             0});
-            this.RoadTaxUpDown.Location = new System.Drawing.Point(561, 200);
+            this.RoadTaxUpDown.Location = new System.Drawing.Point(561, 194);
             this.RoadTaxUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -411,7 +411,7 @@
             // 
             // TransmissionTextBox
             // 
-            this.TransmissionTextBox.Location = new System.Drawing.Point(153, 267);
+            this.TransmissionTextBox.Location = new System.Drawing.Point(153, 266);
             this.TransmissionTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.TransmissionTextBox.Name = "TransmissionTextBox";
             this.TransmissionTextBox.Size = new System.Drawing.Size(199, 23);
@@ -422,7 +422,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(23, 272);
+            this.label13.Location = new System.Drawing.Point(34, 266);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 18);
             this.label13.TabIndex = 48;

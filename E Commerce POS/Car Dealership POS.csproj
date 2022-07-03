@@ -175,6 +175,9 @@
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DBPOSaleDataSet.xsc">
       <DependentUpon>DBPOSaleDataSet.xsd</DependentUpon>
     </None>
