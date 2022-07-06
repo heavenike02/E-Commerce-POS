@@ -138,10 +138,11 @@
             this.ExitPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ExitPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ExitPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ExitPictureBox.Image")));
-            this.ExitPictureBox.Location = new System.Drawing.Point(517, 0);
+            this.ExitPictureBox.Location = new System.Drawing.Point(508, 0);
             this.ExitPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ExitPictureBox.Name = "ExitPictureBox";
-            this.ExitPictureBox.Size = new System.Drawing.Size(52, 59);
+            this.ExitPictureBox.Size = new System.Drawing.Size(61, 59);
+            this.ExitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitPictureBox.TabIndex = 1;
             this.ExitPictureBox.TabStop = false;
             this.ExitPictureBox.Click += new System.EventHandler(this.ExitPictureBox_Click);

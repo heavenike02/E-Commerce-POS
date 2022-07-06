@@ -62,6 +62,7 @@
             this.ExitPictureBox.Location = new System.Drawing.Point(553, 0);
             this.ExitPictureBox.Name = "ExitPictureBox";
             this.ExitPictureBox.Size = new System.Drawing.Size(46, 50);
+            this.ExitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ExitPictureBox.TabIndex = 1;
             this.ExitPictureBox.TabStop = false;
             this.ExitPictureBox.Click += new System.EventHandler(this.ExitPictureBox_Click);
@@ -73,7 +74,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 22);
+            this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Brand Module";
             // 
@@ -81,7 +82,7 @@
             // 
             this.BrandNameTextbox.Location = new System.Drawing.Point(130, 62);
             this.BrandNameTextbox.Name = "BrandNameTextbox";
-            this.BrandNameTextbox.Size = new System.Drawing.Size(462, 27);
+            this.BrandNameTextbox.Size = new System.Drawing.Size(462, 23);
             this.BrandNameTextbox.TabIndex = 2;
             // 
             // SaveButton
@@ -91,7 +92,7 @@
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
             this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveButton.Location = new System.Drawing.Point(332, 109);
+            this.SaveButton.Location = new System.Drawing.Point(362, 109);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(84, 89);
             this.SaveButton.TabIndex = 3;
@@ -106,7 +107,7 @@
             this.label2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 22);
+            this.label2.Size = new System.Drawing.Size(92, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Brand Name:";
             // 
@@ -117,7 +118,7 @@
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
             this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.UpdateButton.Location = new System.Drawing.Point(423, 98);
+            this.UpdateButton.Location = new System.Drawing.Point(434, 97);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(84, 101);
             this.UpdateButton.TabIndex = 5;
@@ -147,13 +148,13 @@
             this.IDLabel.AutoSize = true;
             this.IDLabel.Location = new System.Drawing.Point(38, 152);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(27, 19);
+            this.IDLabel.Size = new System.Drawing.Size(23, 16);
             this.IDLabel.TabIndex = 8;
             this.IDLabel.Text = "ID";
             // 
             // BrandModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(596, 200);

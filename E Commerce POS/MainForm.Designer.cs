@@ -58,6 +58,7 @@
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.MainBody = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SidebarPanel.SuspendLayout();
             this.SettingsSubPanel.SuspendLayout();
             this.FIlesSubPanel.SuspendLayout();
@@ -66,6 +67,7 @@
             this.PanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // SidebarPanel
@@ -96,6 +98,7 @@
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.ForeColor = System.Drawing.Color.White;
             this.LogOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogOutButton.ImageKey = "(none)";
             this.LogOutButton.Location = new System.Drawing.Point(0, 733);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -113,6 +116,7 @@
             this.SupplierButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SupplierButton.ForeColor = System.Drawing.Color.White;
             this.SupplierButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SupplierButton.ImageKey = "(none)";
             this.SupplierButton.Location = new System.Drawing.Point(0, 697);
             this.SupplierButton.Name = "SupplierButton";
             this.SupplierButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -175,6 +179,7 @@
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
             this.SettingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SettingsButton.ImageKey = "(none)";
             this.SettingsButton.Location = new System.Drawing.Point(0, 575);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -237,6 +242,7 @@
             this.FilesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FilesButton.ForeColor = System.Drawing.Color.White;
             this.FilesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FilesButton.ImageKey = "(none)";
             this.FilesButton.Location = new System.Drawing.Point(0, 460);
             this.FilesButton.Name = "FilesButton";
             this.FilesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -299,6 +305,7 @@
             this.StockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StockButton.ForeColor = System.Drawing.Color.White;
             this.StockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StockButton.ImageKey = "(none)";
             this.StockButton.Location = new System.Drawing.Point(0, 336);
             this.StockButton.Name = "StockButton";
             this.StockButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -378,6 +385,7 @@
             this.ProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProductButton.ForeColor = System.Drawing.Color.White;
             this.ProductButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductButton.ImageKey = "(none)";
             this.ProductButton.Location = new System.Drawing.Point(0, 166);
             this.ProductButton.Name = "ProductButton";
             this.ProductButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -395,6 +403,7 @@
             this.DashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DashBoardButton.ForeColor = System.Drawing.Color.White;
             this.DashBoardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DashBoardButton.ImageKey = "(none)";
             this.DashBoardButton.Location = new System.Drawing.Point(0, 127);
             this.DashBoardButton.Name = "DashBoardButton";
             this.DashBoardButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -428,7 +437,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(71, 95);
+            this.label2.Location = new System.Drawing.Point(71, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 18);
             this.label2.TabIndex = 12;
@@ -438,7 +447,7 @@
             // 
             this.UserName.AutoSize = true;
             this.UserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UserName.Location = new System.Drawing.Point(71, 77);
+            this.UserName.Location = new System.Drawing.Point(71, 86);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(71, 18);
             this.UserName.TabIndex = 0;
@@ -446,18 +455,19 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(74, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // PanelTitle
             // 
+            this.PanelTitle.Controls.Add(this.pictureBox2);
             this.PanelTitle.Controls.Add(this.TitleLabel);
             this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitle.Location = new System.Drawing.Point(270, 0);
@@ -471,7 +481,7 @@
             this.TitleLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.TitleLabel.Location = new System.Drawing.Point(276, 9);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(258, 43);
+            this.TitleLabel.Size = new System.Drawing.Size(249, 43);
             this.TitleLabel.TabIndex = 1;
             this.TitleLabel.Text = "Legacy Automotive\'s ";
             // 
@@ -484,6 +494,17 @@
             this.MainBody.Name = "MainBody";
             this.MainBody.Size = new System.Drawing.Size(864, 606);
             this.MainBody.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(492, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(124, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // MainForm
             // 
@@ -510,6 +531,7 @@
             this.PanelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelTitle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,6 +567,7 @@
         private System.Windows.Forms.Button StockButton;
         private System.Windows.Forms.Button StockEntryButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

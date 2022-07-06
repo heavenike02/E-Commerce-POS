@@ -151,7 +151,9 @@ namespace E_Commerce_POS
 
         private void UserButton_Click(object sender, EventArgs e)
         {
+            OpenChildFord(new UserAccount());
             HideSubPanel();
+
         }
 
         private void StoreButton_Click(object sender, EventArgs e)
