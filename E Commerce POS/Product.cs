@@ -17,6 +17,7 @@ namespace E_Commerce_POS
         SqlCommand cmd = new SqlCommand();
         DBConnect dbcon = new DBConnect();
         SqlDataReader dr;
+        string SalesTitle = "Point of Sales";
         public Product()
         {
             InitializeComponent();

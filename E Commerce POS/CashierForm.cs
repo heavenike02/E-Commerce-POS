@@ -19,7 +19,11 @@ namespace E_Commerce_POS
 
         private void ExitPictureBox_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            if (MessageBox.Show("Exit Application ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            { 
+                Application.Exit(); 
+            }
+           
         }
         public void Slide(Button button)
         {
@@ -31,6 +35,7 @@ namespace E_Commerce_POS
         private void NewTransactionButton_Click(object sender, EventArgs e)
         {
             Slide(NewTransactionButton);
+            GetTransactionNO();
         }
 
         private void SearchProductButton_Click(object sender, EventArgs e)
@@ -71,6 +76,18 @@ namespace E_Commerce_POS
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimerLabel.Text = DateTime.Now.ToString("h:mm tt");
+        }
+
+        public void GetTransactionNO()
+        {
+            string SaveDate = DateTime.Now.ToString("yyyyMMdd");
+            string TransactionNO = SaveDate + "1001";
+            TransactionNumberLabel.Text = TransactionNO;
         }
     }
 }

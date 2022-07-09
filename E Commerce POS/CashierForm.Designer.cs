@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -68,9 +69,9 @@
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.DisplayTotalLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.DateLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.TransactionNumberLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -80,6 +81,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.TimerLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -148,6 +151,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
+            this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.TimerLabel);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.label14);
@@ -157,9 +161,9 @@
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.TransactionNumberLabel);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.DateLabel);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.DisplayTotalLabel);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
@@ -544,47 +548,49 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Garamond", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(19, 66);
+            this.label3.Location = new System.Drawing.Point(6, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Transaction No.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // DateLabel
             // 
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(19, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "0.00";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DateLabel.Location = new System.Drawing.Point(6, 120);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(141, 18);
+            this.DateLabel.TabIndex = 3;
+            this.DateLabel.Text = "0.00";
+            this.DateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
+            this.label6.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(19, 102);
+            this.label6.Location = new System.Drawing.Point(6, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 18);
             this.label6.TabIndex = 4;
             this.label6.Text = "Date";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // TransactionNumberLabel
             // 
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(19, 84);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 18);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "0.00";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TransactionNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TransactionNumberLabel.Location = new System.Drawing.Point(6, 84);
+            this.TransactionNumberLabel.Name = "TransactionNumberLabel";
+            this.TransactionNumberLabel.Size = new System.Drawing.Size(141, 18);
+            this.TransactionNumberLabel.TabIndex = 5;
+            this.TransactionNumberLabel.Text = "0.00";
+            this.TransactionNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
+            this.label8.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(6, 283);
             this.label8.Name = "label8";
@@ -596,6 +602,7 @@
             // 
             // label9
             // 
+            this.label9.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(6, 301);
             this.label9.Name = "label9";
@@ -606,6 +613,7 @@
             // 
             // label10
             // 
+            this.label10.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(6, 319);
             this.label10.Name = "label10";
@@ -616,6 +624,7 @@
             // 
             // label11
             // 
+            this.label11.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Location = new System.Drawing.Point(6, 337);
             this.label11.Name = "label11";
@@ -627,9 +636,9 @@
             // label12
             // 
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(102, 283);
+            this.label12.Location = new System.Drawing.Point(107, 279);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 18);
+            this.label12.Size = new System.Drawing.Size(56, 18);
             this.label12.TabIndex = 10;
             this.label12.Text = "0.00";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -637,9 +646,9 @@
             // label13
             // 
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(102, 301);
+            this.label13.Location = new System.Drawing.Point(107, 298);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 18);
+            this.label13.Size = new System.Drawing.Size(56, 18);
             this.label13.TabIndex = 11;
             this.label13.Text = "0.00";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -647,9 +656,9 @@
             // label14
             // 
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(102, 319);
+            this.label14.Location = new System.Drawing.Point(107, 317);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 18);
+            this.label14.Size = new System.Drawing.Size(56, 18);
             this.label14.TabIndex = 12;
             this.label14.Text = "0.00";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -657,9 +666,9 @@
             // label15
             // 
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(100, 337);
+            this.label15.Location = new System.Drawing.Point(107, 336);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 18);
+            this.label15.Size = new System.Drawing.Size(56, 18);
             this.label15.TabIndex = 13;
             this.label15.Text = "0.00";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -676,6 +685,19 @@
             this.TimerLabel.TabIndex = 14;
             this.TimerLabel.Text = "00:00:00";
             this.TimerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.panel6.Location = new System.Drawing.Point(0, 19);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 559);
+            this.panel6.TabIndex = 4;
             // 
             // CashierForm
             // 
@@ -738,9 +760,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label TransactionNumberLabel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label DisplayTotalLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -755,5 +777,7 @@
         private System.Windows.Forms.DataGridViewImageColumn ColReduce;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.Label TimerLabel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel6;
     }
 }
