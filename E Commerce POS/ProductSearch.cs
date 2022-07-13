@@ -18,13 +18,94 @@ namespace E_Commerce_POS
         SqlCommand cmd = new SqlCommand();
         DBConnect dbcon = new DBConnect();
         SqlDataReader dr;
-        public ProductSearch()
+        private String transactionnumber;
+        private double price;
+        private string cashier;
+        private string reg;
+        CashierForm cashierForm;
+        public ProductSearch(CashierForm Cash)
         {
             conn = new SqlConnection(dbcon.myConnection());
 
             InitializeComponent();
+            LoadProduct();
+            cashierForm = Cash;
+
         }
 
-       
+        public void LoadProduct()
+        {
+            try
+            {
+
+                DGVProductSearch.Rows.Clear();
+                // cmd = new SqlCommand("SELECT  p.model,p.reg,p.trim,p.price,p.fueltype,p.enginesize,p.mileage,p.roadtax,p.description ", conn);
+                cmd = new SqlCommand("SELECT * FROM tbProduc WHERE reg LIKE '%" + SearchMetroTextBox.Text + "%' OR bid LIKE '%" + SearchMetroTextBox.Text + "%' OR model LIKE '%" + SearchMetroTextBox.Text + "%' OR cid LIKE '%" + SearchMetroTextBox.Text + "%' OR bid LIKE '%" + SearchMetroTextBox.Text + "%'", conn);
+                conn.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    DGVProductSearch.Rows.Add(dr["Id"].ToString(), dr["cid"].ToString(), dr["bid"].ToString(), dr["model"].ToString(), dr["description"].ToString(), dr["reg"].ToString(), dr["trim"].ToString(), dr["price"].ToString(), dr["fueltype"].ToString(), dr["enginesize"].ToString(), dr["mileage"].ToString(), dr["transmission"].ToString(), dr["roadtax"].ToString());
+                }
+                dr.Close();
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+
+        }
+        public void ProductDetails(string transactionnumber, double price)
+        {
+            //this.transactionnumber = transactionnumber;
+            // this.price = price;
+        }
+
+
+
+
+
+        private void SearchMetroTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadProduct();
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void DGVProductSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string ColName = DGVProductSearch.Columns[e.ColumnIndex].Name;
+           
+            if (ColName == "Select")
+            {
+             if (MessageBox.Show("Are you sure you want to add this car to your cart ?", "Add to Cart", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+             {
+                cmd = new SqlCommand("INSERT INTO tbCart (transactionnumber,price,saledate,cashier,reg)VALUES(@transactionnumber,@price,@saledate,@cashier,@reg)", conn);
+                price =  double.Parse(DGVProductSearch[7, e.RowIndex].Value.ToString());
+                cashier = cashierForm.UserNameLabel.Text;
+                reg = DGVProductSearch[5, e.RowIndex].Value.ToString();
+                cmd.Parameters.AddWithValue("@transactionnumber", cashierForm.TransactionNumberLabel.Text);
+                cmd.Parameters.AddWithValue("@price",price);
+                cmd.Parameters.AddWithValue("@reg", reg);
+                cmd.Parameters.AddWithValue("@saledate", DateTime.Now);
+                cmd.Parameters.AddWithValue("@cashier", cashier);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                cashierForm.LoadCart();
+                MessageBox.Show("Car has been sucessfully inserted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             }
+               
+
+            }
+        }
     }
 }

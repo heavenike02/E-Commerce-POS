@@ -85,6 +85,7 @@ namespace E_Commerce_POS
             ChildForm.Show();   
         }
 
+        #region Button
         private void DashBoardButton_Click(object sender, EventArgs e)
         {
             HideSubPanel();
@@ -172,6 +173,8 @@ namespace E_Commerce_POS
             HideSubPanel();
         }
 
-       
+        #endregion Button
+
+
     }
 }
