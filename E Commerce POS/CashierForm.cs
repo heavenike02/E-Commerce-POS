@@ -17,10 +17,16 @@ namespace E_Commerce_POS
         SqlCommand cmd = new SqlCommand();
         DBConnect dbcon = new DBConnect();
         SqlDataReader dr;
+        string SaveTitle = "Point of Sales";
+
+
+        string Id;
+        string price;
         public CashierForm()
         {
             InitializeComponent();
             conn = new SqlConnection(dbcon.myConnection());
+            GetTransactionNO();
         }
 
         private void ExitPictureBox_Click(object sender, EventArgs e)
@@ -55,6 +61,11 @@ namespace E_Commerce_POS
         private void AddDiscountButton_Click(object sender, EventArgs e)
         {
             Slide(AddDiscountButton);
+            DiscountForm discountform = new DiscountForm(this);
+            discountform.IDLabel.Text = Id;
+            discountform.TotalPriceTextBox.Text = price;
+            discountform.ShowDialog();
+            discountform.DIscountPercentTextBox.Focus();
         }
 
         private void SettlePaymentButton_Click(object sender, EventArgs e)
@@ -91,11 +102,39 @@ namespace E_Commerce_POS
         
         public void GetTransactionNO()
         {
-            //Random generator = new Random();
-            //string Randomnumber = generator.Next(1, 10000).ToString("D4");
-            string SaveDate = DateTime.Now.ToString("yyyyMMdd");
-            string TransactionNO = SaveDate + "1001";
-            TransactionNumberLabel.Text = TransactionNO;
+            try
+            {
+                string SaveDate = DateTime.Now.ToString("yyyyMMdd");
+                int count;
+                string TransactionNO;
+                conn.Open();
+                cmd = new SqlCommand("SELECT TOP 1 transactionnumber FROM tbCart WHERE transactionnumber LIKE '" + SaveDate + "%' ORDER BY Id desc", conn);
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    TransactionNO = dr[0].ToString();
+                    count = int.Parse(TransactionNO.Substring(8, 4));
+                    TransactionNumberLabel.Text = SaveDate + (count + 1);
+                }
+                else
+                {
+                    TransactionNO = SaveDate + "1001";
+                    TransactionNumberLabel.Text = TransactionNO;
+                }
+                dr.Close();
+                conn.Close();
+
+            }
+            catch (Exception ex ) 
+            {
+                conn.Close();
+                MessageBox.Show(ex.Message,SaveTitle);
+
+
+            }
+
+
         }
 
         public void LoadCart()
@@ -115,7 +154,7 @@ namespace E_Commerce_POS
                 i++;
                 total += Convert.ToDouble(dr["total"].ToString());
                 discount  += Convert.ToDouble(dr["disc"].ToString());
-                DGVCashier.Rows.Add(i, dr["Id"].ToString(), dr["price"].ToString(), dr["reg"].ToString(), dr["disc"].ToString(), double.Parse(dr["total"].ToString()).ToString("#,##0.00"));
+                DGVCashier.Rows.Add(i, dr["Id"].ToString(), dr["reg"].ToString(), dr["price"].ToString(), dr["disc"].ToString(), double.Parse(dr["total"].ToString()).ToString("#,##0.00"));
             }
             dr.Close();
             conn.Close();
@@ -137,7 +176,15 @@ namespace E_Commerce_POS
 
         }
 
+        private void DGVCashier_SelectionChanged(object sender, EventArgs e)
+        {
+            int i = DGVCashier.CurrentRow.Index;
+            Id = DGVCashier[1, i].Value.ToString();
+            price = DGVCashier[5, i].Value.ToString();
 
 
+        }
+
+        
     }
 }

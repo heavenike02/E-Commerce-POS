@@ -101,6 +101,7 @@
             this.ExitPictureBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ExitPictureBox.Name = "ExitPictureBox";
             this.ExitPictureBox.Size = new System.Drawing.Size(51, 42);
+            this.ExitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ExitPictureBox.TabIndex = 1;
             this.ExitPictureBox.TabStop = false;
             this.ExitPictureBox.Click += new System.EventHandler(this.ExitPictureBox_Click);

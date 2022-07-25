@@ -313,6 +313,7 @@
             this.Edit1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Edit1.HeaderText = "";
             this.Edit1.Image = ((System.Drawing.Image)(resources.GetObject("Edit1.Image")));
+            this.Edit1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Edit1.MinimumWidth = 6;
             this.Edit1.Name = "Edit1";
             this.Edit1.Width = 6;
@@ -322,6 +323,7 @@
             this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Delete.HeaderText = "";
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.Width = 6;
@@ -335,7 +337,6 @@
             this.Controls.Add(this.DGVProduct);
             this.Controls.Add(this.FooterPanel);
             this.Font = new System.Drawing.Font("Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Product";
             this.Text = "ProductForm";
@@ -353,6 +354,9 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Panel FooterPanel;
         private System.Windows.Forms.DataGridView DGVProduct;
+        private MetroFramework.Controls.MetroTextBox SearchMetroTextBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -368,8 +372,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewImageColumn Edit1;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private MetroFramework.Controls.MetroTextBox SearchMetroTextBox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

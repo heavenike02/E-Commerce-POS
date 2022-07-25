@@ -330,9 +330,9 @@
             this.Select.HeaderText = "";
             this.Select.Image = ((System.Drawing.Image)(resources.GetObject("Select.Image")));
             this.Select.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Select.MinimumWidth = 6;
+            this.Select.MinimumWidth = 12;
             this.Select.Name = "Select";
-            this.Select.Width = 6;
+            this.Select.Width = 12;
             // 
             // ProductSearch
             // 

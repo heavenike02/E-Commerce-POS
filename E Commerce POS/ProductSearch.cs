@@ -18,7 +18,7 @@ namespace E_Commerce_POS
         SqlCommand cmd = new SqlCommand();
         DBConnect dbcon = new DBConnect();
         SqlDataReader dr;
-        private String transactionnumber;
+        //private String transactionnumber;
         private double price;
         private string cashier;
         private string reg;
@@ -60,12 +60,7 @@ namespace E_Commerce_POS
 
 
         }
-        public void ProductDetails(string transactionnumber, double price)
-        {
-            //this.transactionnumber = transactionnumber;
-            // this.price = price;
-        }
-
+        
 
 
 
@@ -103,7 +98,13 @@ namespace E_Commerce_POS
                 cashierForm.LoadCart();
                 MessageBox.Show("Car has been sucessfully inserted.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
              }
-               
+             
+
+
+
+
+
+
 
             }
         }

@@ -54,7 +54,6 @@
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.TimerLabel = new System.Windows.Forms.Label();
             this.VatableLabel = new System.Windows.Forms.Label();
             this.TaxLabel = new System.Windows.Forms.Label();
@@ -69,6 +68,7 @@
             this.DateLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.DisplayTotalLabel = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.DGVCashier = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +77,6 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAdd = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColReduce = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -389,19 +387,11 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.DisplayTotalLabel);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1021, 80);
+            this.panel5.Location = new System.Drawing.Point(1012, 80);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(163, 581);
+            this.panel5.Size = new System.Drawing.Size(172, 581);
             this.panel5.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            this.panel6.Location = new System.Drawing.Point(0, 19);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 559);
-            this.panel6.TabIndex = 4;
             // 
             // TimerLabel
             // 
@@ -411,7 +401,7 @@
             this.TimerLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.TimerLabel.Location = new System.Drawing.Point(0, 537);
             this.TimerLabel.Name = "TimerLabel";
-            this.TimerLabel.Size = new System.Drawing.Size(163, 44);
+            this.TimerLabel.Size = new System.Drawing.Size(172, 44);
             this.TimerLabel.TabIndex = 14;
             this.TimerLabel.Text = "00:00:00";
             this.TimerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -419,9 +409,9 @@
             // VatableLabel
             // 
             this.VatableLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.VatableLabel.Location = new System.Drawing.Point(107, 336);
+            this.VatableLabel.Location = new System.Drawing.Point(89, 336);
             this.VatableLabel.Name = "VatableLabel";
-            this.VatableLabel.Size = new System.Drawing.Size(56, 18);
+            this.VatableLabel.Size = new System.Drawing.Size(74, 18);
             this.VatableLabel.TabIndex = 13;
             this.VatableLabel.Text = "0.00";
             this.VatableLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -429,9 +419,9 @@
             // TaxLabel
             // 
             this.TaxLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TaxLabel.Location = new System.Drawing.Point(107, 317);
+            this.TaxLabel.Location = new System.Drawing.Point(89, 317);
             this.TaxLabel.Name = "TaxLabel";
-            this.TaxLabel.Size = new System.Drawing.Size(56, 18);
+            this.TaxLabel.Size = new System.Drawing.Size(74, 18);
             this.TaxLabel.TabIndex = 12;
             this.TaxLabel.Text = "0.00";
             this.TaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -439,9 +429,9 @@
             // DIscountLabel
             // 
             this.DIscountLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DIscountLabel.Location = new System.Drawing.Point(107, 298);
+            this.DIscountLabel.Location = new System.Drawing.Point(89, 298);
             this.DIscountLabel.Name = "DIscountLabel";
-            this.DIscountLabel.Size = new System.Drawing.Size(56, 18);
+            this.DIscountLabel.Size = new System.Drawing.Size(74, 18);
             this.DIscountLabel.TabIndex = 11;
             this.DIscountLabel.Text = "0.00";
             this.DIscountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -449,9 +439,9 @@
             // SalesLabel
             // 
             this.SalesLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SalesLabel.Location = new System.Drawing.Point(107, 279);
+            this.SalesLabel.Location = new System.Drawing.Point(89, 279);
             this.SalesLabel.Name = "SalesLabel";
-            this.SalesLabel.Size = new System.Drawing.Size(56, 18);
+            this.SalesLabel.Size = new System.Drawing.Size(74, 18);
             this.SalesLabel.TabIndex = 10;
             this.SalesLabel.Text = "0.00";
             this.SalesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -549,10 +539,18 @@
             this.DisplayTotalLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.DisplayTotalLabel.Location = new System.Drawing.Point(0, 0);
             this.DisplayTotalLabel.Name = "DisplayTotalLabel";
-            this.DisplayTotalLabel.Size = new System.Drawing.Size(163, 20);
+            this.DisplayTotalLabel.Size = new System.Drawing.Size(172, 20);
             this.DisplayTotalLabel.TabIndex = 0;
             this.DisplayTotalLabel.Text = "0.00";
             this.DisplayTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.panel6.Location = new System.Drawing.Point(0, 23);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 559);
+            this.panel6.TabIndex = 4;
             // 
             // DGVCashier
             // 
@@ -576,8 +574,6 @@
             this.Column9,
             this.Column7,
             this.Column8,
-            this.ColAdd,
-            this.ColReduce,
             this.Delete});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
@@ -594,8 +590,9 @@
             this.DGVCashier.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DGVCashier.RowHeadersWidth = 51;
             this.DGVCashier.RowTemplate.Height = 24;
-            this.DGVCashier.Size = new System.Drawing.Size(756, 581);
+            this.DGVCashier.Size = new System.Drawing.Size(747, 581);
             this.DGVCashier.TabIndex = 3;
+            this.DGVCashier.SelectionChanged += new System.EventHandler(this.DGVCashier_SelectionChanged);
             // 
             // timer1
             // 
@@ -651,23 +648,6 @@
             this.Column8.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column8.HeaderText = "Total";
             this.Column8.Name = "Column8";
-            // 
-            // ColAdd
-            // 
-            this.ColAdd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColAdd.HeaderText = "";
-            this.ColAdd.Image = ((System.Drawing.Image)(resources.GetObject("ColAdd.Image")));
-            this.ColAdd.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColAdd.MinimumWidth = 6;
-            this.ColAdd.Name = "ColAdd";
-            this.ColAdd.Width = 6;
-            // 
-            // ColReduce
-            // 
-            this.ColReduce.HeaderText = "";
-            this.ColReduce.Image = ((System.Drawing.Image)(resources.GetObject("ColReduce.Image")));
-            this.ColReduce.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColReduce.Name = "ColReduce";
             // 
             // Delete
             // 
@@ -753,8 +733,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewImageColumn ColAdd;
-        private System.Windows.Forms.DataGridViewImageColumn ColReduce;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }
