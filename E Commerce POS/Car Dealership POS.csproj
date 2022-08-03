@@ -113,6 +113,12 @@
     <Compile Include="DiscountForm.Designer.cs">
       <DependentUpon>DiscountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettlePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettlePayment.Designer.cs">
+      <DependentUpon>SettlePayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DiscountForm.resx">
       <DependentUpon>DiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettlePayment.resx">
+      <DependentUpon>SettlePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

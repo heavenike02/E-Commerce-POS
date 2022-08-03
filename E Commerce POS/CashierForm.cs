@@ -27,6 +27,7 @@ namespace E_Commerce_POS
             InitializeComponent();
             conn = new SqlConnection(dbcon.myConnection());
             GetTransactionNO();
+            DateLabel.Text = DateTime.Now.ToString("D");
         }
 
         private void ExitPictureBox_Click(object sender, EventArgs e)
@@ -71,6 +72,10 @@ namespace E_Commerce_POS
         private void SettlePaymentButton_Click(object sender, EventArgs e)
         {
             Slide(SettlePaymentButton);
+            SettlePaymentForm settlePaymentForm = new SettlePaymentForm(this);
+            settlePaymentForm.SaleTotalTextBox.Text = DisplayTotalLabel.Text;
+            settlePaymentForm.ShowDialog(); 
+
         }
 
         private void ClearCartButton_Click(object sender, EventArgs e)
@@ -108,7 +113,7 @@ namespace E_Commerce_POS
                 int count;
                 string TransactionNO;
                 conn.Open();
-                cmd = new SqlCommand("SELECT TOP 1 transactionnumber FROM tbCart WHERE transactionnumber LIKE '" + SaveDate + "%' ORDER BY Id desc", conn);
+                cmd = new SqlCommand("SELECT TOP 1 transactionnumber FROM tbCarts WHERE transactionnumber LIKE '" + SaveDate + "%' ORDER BY Id desc", conn);
                 dr = cmd.ExecuteReader();
                 dr.Read();
                 if (dr.HasRows)
@@ -145,7 +150,7 @@ namespace E_Commerce_POS
 
             DGVCashier.Rows.Clear();
             conn.Open();
-            cmd = new SqlCommand("SELECT Id,price,reg,disc,total FROM tbCart WHERE transactionnumber LIKE @transactionnumber and status LIKE 'pending'" ,conn);
+            cmd = new SqlCommand("SELECT Id,price,reg,disc,total FROM tbCarts WHERE transactionnumber LIKE @transactionnumber and status LIKE 'pending'" ,conn);
             cmd.Parameters.AddWithValue("@transactionnumber", TransactionNumberLabel.Text);
             dr = cmd.ExecuteReader();
             while (dr.Read())

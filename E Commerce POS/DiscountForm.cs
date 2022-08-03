@@ -55,7 +55,7 @@ namespace E_Commerce_POS
                 if (MessageBox.Show("Add discount? Click Yes to Confirm ", SaveTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     conn.Open();
-                    cmd = new SqlCommand("UPDATE tbCart SET discpercent = @discpercent WHERE Id = @Id", conn);
+                    cmd = new SqlCommand("UPDATE tbCarts SET discpercent = @discpercent WHERE Id = @Id", conn);
                     cmd.Parameters.AddWithValue("@discpercent", double.Parse(DIscountPercentTextBox.Text));
                     cmd.Parameters.AddWithValue("@Id", int.Parse(IDLabel.Text));
                     cmd.ExecuteNonQuery();

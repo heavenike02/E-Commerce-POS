@@ -36,7 +36,7 @@ namespace E_Commerce_POS
             {
                 if (MessageBox.Show("Are you sure you want to save this product?", "Save Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    cmd = new SqlCommand("INSERT INTO tbProduc (bid,cid,model,reg,trim,price,fueltype,enginesize,mileage,transmission,roadtax,description)VALUES(@bid,@cid,@model,@reg,@trim,@price,@fueltype,@enginesize,@mileage,@transmission,@roadtax,@description)", conn);
+                    cmd = new SqlCommand("INSERT INTO tbProduc (bid,cid,model,reg,qty,price,fueltype,enginesize,mileage,transmission,roadtax,description)VALUES(@bid,@cid,@model,@reg,@qty,@price,@fueltype,@enginesize,@mileage,@transmission,@roadtax,@description)", conn);
                     cmd.Parameters.AddWithValue("@bid", BrandComboBox.Text);
                     cmd.Parameters.AddWithValue("@cid", CategoryComboBox.Text);
 
@@ -44,7 +44,7 @@ namespace E_Commerce_POS
                     cmd.Parameters.AddWithValue("@reg", RegTextBox.Text);
 
 
-                    cmd.Parameters.AddWithValue("@trim", TrimTextBox.Text);
+                    cmd.Parameters.AddWithValue("@qty", QtyUpDown.Value);
                     cmd.Parameters.AddWithValue("@price", PriceUpDown.Value);
                     cmd.Parameters.AddWithValue("@fueltype", FuelTypeTextBox.Text);
                     cmd.Parameters.AddWithValue("@enginesize", EngineSIzeUpDown.Value);
@@ -89,7 +89,7 @@ namespace E_Commerce_POS
 
             ModelTextBox.Clear();
             RegTextBox.Clear();
-            TrimTextBox.Clear();
+            
             FuelTypeTextBox.Clear();
             TransmissionTextBox.Clear();
 
@@ -135,7 +135,7 @@ namespace E_Commerce_POS
             {
                 if (MessageBox.Show("Are you sure you want to update this record?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    cmd = new SqlCommand("UPDATE tbProduc SET bid=@bid,cid=@cid,model=@model,reg=@reg,trim=@trim,price=@price,fueltype=@fueltype,enginesize=@enginesize,mileage=@mileage,transmission=@transmission,roadtax=@roadtax,description=@description WHERE reg LIKE @reg ",conn);
+                    cmd = new SqlCommand("UPDATE tbProduc SET bid=@bid,cid=@cid,model=@model,reg=@reg,qty=@qty,price=@price,fueltype=@fueltype,enginesize=@enginesize,mileage=@mileage,transmission=@transmission,roadtax=@roadtax,description=@description WHERE reg LIKE @reg ", conn);
                     cmd.Parameters.AddWithValue("@bid", BrandComboBox.Text);
                     cmd.Parameters.AddWithValue("@cid", CategoryComboBox.Text);
 
@@ -143,7 +143,7 @@ namespace E_Commerce_POS
                     cmd.Parameters.AddWithValue("@reg", RegTextBox.Text);
 
 
-                    cmd.Parameters.AddWithValue("@trim", TrimTextBox.Text);
+                    cmd.Parameters.AddWithValue("@qty", 1);
                     cmd.Parameters.AddWithValue("@price", PriceUpDown.Value);
                     cmd.Parameters.AddWithValue("@fueltype", FuelTypeTextBox.Text);
                     cmd.Parameters.AddWithValue("@enginesize", EngineSIzeUpDown.Value);

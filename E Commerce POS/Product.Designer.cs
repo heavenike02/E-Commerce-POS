@@ -248,10 +248,10 @@
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Trim";
+            this.Column6.HeaderText = "QTY";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 58;
+            this.Column6.Width = 59;
             // 
             // Column4
             // 

@@ -32,14 +32,14 @@ namespace E_Commerce_POS
             {
                 
                 DGVProduct.Rows.Clear();
-                // cmd = new SqlCommand("SELECT  p.model,p.reg,p.trim,p.price,p.fueltype,p.enginesize,p.mileage,p.roadtax,p.description ", conn);
+                
                 cmd = new SqlCommand("SELECT * FROM tbProduc WHERE reg LIKE '%" + SearchMetroTextBox.Text + "%' OR bid LIKE '%" + SearchMetroTextBox.Text + "%' OR model LIKE '%" + SearchMetroTextBox.Text + "%' OR cid LIKE '%" + SearchMetroTextBox.Text + "%' OR bid LIKE '%" + SearchMetroTextBox.Text + "%'",  conn);
                 conn.Open();
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
 
-                    DGVProduct.Rows.Add(dr["Id"].ToString(), dr["cid"].ToString(), dr["bid"].ToString(), dr["model"].ToString(), dr["reg"].ToString(), dr["trim"].ToString(), dr["price"].ToString(), dr["fueltype"].ToString(), dr["enginesize"].ToString(), dr["mileage"].ToString(), dr["transmission"].ToString(), dr["roadtax"].ToString(), dr["description"].ToString());
+                    DGVProduct.Rows.Add(dr["Id"].ToString(), dr["cid"].ToString(), dr["bid"].ToString(), dr["model"].ToString(), dr["reg"].ToString(), dr["qty"].ToString(), dr["price"].ToString(), dr["fueltype"].ToString(), dr["enginesize"].ToString(), dr["mileage"].ToString(), dr["transmission"].ToString(), dr["roadtax"].ToString(), dr["description"].ToString());
                 }
                 dr.Close();
                 conn.Close();
@@ -75,7 +75,7 @@ namespace E_Commerce_POS
                 productModule.CategoryComboBox.Text = DGVProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
                 productModule.ModelTextBox.Text = DGVProduct.Rows[e.RowIndex].Cells[3].Value.ToString();
                 productModule.RegTextBox.Text = DGVProduct.Rows[e.RowIndex].Cells[4].Value.ToString();
-                productModule.TrimTextBox.Text = DGVProduct.Rows[e.RowIndex].Cells[5].Value.ToString();
+                productModule.QtyUpDown.Text = DGVProduct.Rows[e.RowIndex].Cells[5].Value.ToString();
                 productModule.PriceUpDown.Text = DGVProduct.Rows[e.RowIndex].Cells[6].Value.ToString();
                 productModule.FuelTypeTextBox.Text = DGVProduct.Rows[e.RowIndex].Cells[7].Value.ToString();
                 productModule.EngineSIzeUpDown.Text = DGVProduct.Rows[e.RowIndex].Cells[8].Value.ToString();

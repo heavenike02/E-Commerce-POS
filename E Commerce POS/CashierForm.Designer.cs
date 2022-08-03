@@ -54,6 +54,7 @@
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.TimerLabel = new System.Windows.Forms.Label();
             this.VatableLabel = new System.Windows.Forms.Label();
             this.TaxLabel = new System.Windows.Forms.Label();
@@ -68,9 +69,7 @@
             this.DateLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.DisplayTotalLabel = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.DGVCashier = new System.Windows.Forms.DataGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +77,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -393,6 +393,14 @@
             this.panel5.Size = new System.Drawing.Size(172, 581);
             this.panel5.TabIndex = 0;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.panel6.Location = new System.Drawing.Point(0, 23);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 559);
+            this.panel6.TabIndex = 4;
+            // 
             // TimerLabel
             // 
             this.TimerLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
@@ -544,14 +552,6 @@
             this.DisplayTotalLabel.Text = "0.00";
             this.DisplayTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            this.panel6.Location = new System.Drawing.Point(0, 23);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 559);
-            this.panel6.TabIndex = 4;
-            // 
             // DGVCashier
             // 
             this.DGVCashier.AllowUserToAddRows = false;
@@ -594,11 +594,6 @@
             this.DGVCashier.TabIndex = 3;
             this.DGVCashier.SelectionChanged += new System.EventHandler(this.DGVCashier_SelectionChanged);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -614,7 +609,6 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Visible = false;
-            this.Column2.Width = 44;
             // 
             // Column10
             // 
@@ -657,6 +651,11 @@
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.Width = 24;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // CashierForm
             // 
@@ -709,7 +708,6 @@
         private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.PictureBox ExitPictureBox;
         private System.Windows.Forms.Panel SlidePanel;
-        private System.Windows.Forms.DataGridView DGVCashier;
         private System.Windows.Forms.Label VatableLabel;
         private System.Windows.Forms.Label TaxLabel;
         private System.Windows.Forms.Label DIscountLabel;
@@ -734,5 +732,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        public System.Windows.Forms.DataGridView DGVCashier;
     }
 }
