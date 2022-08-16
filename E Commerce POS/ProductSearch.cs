@@ -40,7 +40,7 @@ namespace E_Commerce_POS
 
                 DGVProductSearch.Rows.Clear();
                 
-                cmd = new SqlCommand("SELECT * FROM tbProduc WHERE qty = 1 AND reg LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND  bid LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND  model LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND cid LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND  bid LIKE '%" + SearchMetroTextBox.Text + "%'", conn);
+                cmd = new SqlCommand("SELECT * FROM tbProduc WHERE qty = 0 AND reg LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND  bid LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND  model LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND cid LIKE '%" + SearchMetroTextBox.Text + "%' OR  qty = 1 AND  bid LIKE '%" + SearchMetroTextBox.Text + "%'", conn);
                 conn.Open();
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -87,7 +87,7 @@ namespace E_Commerce_POS
              {
                 cmd = new SqlCommand("INSERT INTO tbCarts (transactionnumber,price,saledate,cashier,reg)VALUES(@transactionnumber,@price,@saledate,@cashier,@reg)", conn);
                 price =  double.Parse(DGVProductSearch[7, e.RowIndex].Value.ToString());
-                cashier = cashierForm.UserNameLabel.Text;
+                cashier = cashierForm.NameLabel.Text;
                 reg = DGVProductSearch[5, e.RowIndex].Value.ToString();
                 cmd.Parameters.AddWithValue("@transactionnumber", cashierForm.TransactionNumberLabel.Text);
                 cmd.Parameters.AddWithValue("@price",price);

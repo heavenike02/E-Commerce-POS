@@ -51,14 +51,13 @@
             this.ProductButton = new System.Windows.Forms.Button();
             this.DashBoardButton = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.UserName = new System.Windows.Forms.Label();
+            this.AdminLabel = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelTitle = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.MainBody = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SidebarPanel.SuspendLayout();
             this.SettingsSubPanel.SuspendLayout();
             this.FIlesSubPanel.SuspendLayout();
@@ -416,9 +415,8 @@
             // 
             // PanelLogo
             // 
-            this.PanelLogo.Controls.Add(this.flowLayoutPanel1);
-            this.PanelLogo.Controls.Add(this.label2);
-            this.PanelLogo.Controls.Add(this.UserName);
+            this.PanelLogo.Controls.Add(this.AdminLabel);
+            this.PanelLogo.Controls.Add(this.UsernameLabel);
             this.PanelLogo.Controls.Add(this.pictureBox1);
             this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
@@ -426,32 +424,25 @@
             this.PanelLogo.Size = new System.Drawing.Size(253, 127);
             this.PanelLogo.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // AdminLabel
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(190, 111);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
-            this.flowLayoutPanel1.TabIndex = 13;
+            this.AdminLabel.AutoSize = true;
+            this.AdminLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AdminLabel.Location = new System.Drawing.Point(70, 106);
+            this.AdminLabel.Name = "AdminLabel";
+            this.AdminLabel.Size = new System.Drawing.Size(51, 18);
+            this.AdminLabel.TabIndex = 12;
+            this.AdminLabel.Text = "Admin";
             // 
-            // label2
+            // UsernameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(71, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Admin";
-            // 
-            // UserName
-            // 
-            this.UserName.AutoSize = true;
-            this.UserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UserName.Location = new System.Drawing.Point(71, 86);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(71, 18);
-            this.UserName.TabIndex = 0;
-            this.UserName.Text = "Username";
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.UsernameLabel.Location = new System.Drawing.Point(71, 86);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(71, 18);
+            this.UsernameLabel.TabIndex = 0;
+            this.UsernameLabel.Text = "Username";
             // 
             // pictureBox1
             // 
@@ -475,6 +466,17 @@
             this.PanelTitle.Size = new System.Drawing.Size(864, 55);
             this.PanelTitle.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(492, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(124, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // TitleLabel
             // 
             this.TitleLabel.Font = new System.Drawing.Font("Californian FB", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,17 +496,6 @@
             this.MainBody.Name = "MainBody";
             this.MainBody.Size = new System.Drawing.Size(864, 606);
             this.MainBody.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(492, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(124, 55);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // MainForm
             // 
@@ -550,8 +541,6 @@
         private System.Windows.Forms.Button CatergoryButton;
         private System.Windows.Forms.Button DashBoardButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Button LogOutButton;
         private System.Windows.Forms.Panel SettingsSubPanel;
@@ -566,8 +555,9 @@
         private System.Windows.Forms.Button FilesButton;
         private System.Windows.Forms.Button StockButton;
         private System.Windows.Forms.Button StockEntryButton;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label AdminLabel;
+        public System.Windows.Forms.Label UsernameLabel;
     }
 }
 

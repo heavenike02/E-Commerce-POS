@@ -25,29 +25,26 @@ namespace E_Commerce_POS
             cashierform = cash;
         }
 
-        private void SettlePaymentForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
+           
 
             try{
             
                 for(int i = 0; i < cashierform.DGVCashier.Rows.Count; i++)
                 { 
                     
-                   /* cmd = new SqlCommand("UPDATE tbProduc SET qty = 0  WHERE reg LIKE '" + cashierform.DGVCashier.Rows[i].Cells[2].Value.ToString() + "'", conn);
+                   cmd = new SqlCommand("UPDATE tbProduc SET qty = 0  WHERE reg LIKE '" + cashierform.DGVCashier.Rows[i].Cells[2].Value.ToString() + "'", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-
-                    cmd = new SqlCommand("UPDATE tbCart Set status = 'Sold' WHERE id = ' " + cashierform.DGVCashier.Rows[i].Cells[1].Value.ToString() + "'", conn);
+                   ;
+                    cmd = new SqlCommand("UPDATE tbCarts Set status = 'Sold' WHERE reg LIKE '" + cashierform.DGVCashier.Rows[i].Cells[2].Value.ToString() + "'", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                   */                   
+                                      
                     double Deposit = double.Parse(DepositTextBox.Text)/ cashierform.DGVCashier.Rows.Count;
                   
                     conn.Open();

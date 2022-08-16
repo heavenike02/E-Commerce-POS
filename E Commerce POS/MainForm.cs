@@ -171,6 +171,12 @@ namespace E_Commerce_POS
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             HideSubPanel();
+            if (MessageBox.Show("Logout Application ? ", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            }
         }
 
         #endregion Button

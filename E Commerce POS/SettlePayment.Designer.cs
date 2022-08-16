@@ -257,7 +257,7 @@
             this.Name = "SettlePaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settle Deposit";
-            this.Load += new System.EventHandler(this.SettlePaymentForm_Load);
+//            this.Load += new System.EventHandler(this.SettlePaymentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

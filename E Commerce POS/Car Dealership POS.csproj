@@ -95,6 +95,12 @@
     <Compile Include="Catergory.Designer.cs">
       <DependentUpon>Catergory.cs</DependentUpon>
     </Compile>
+    <Compile Include="DailySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailySales.Designer.cs">
+      <DependentUpon>DailySales.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBConnect.cs" />
     <Compile Include="DBPOSaleDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -112,6 +118,18 @@
     </Compile>
     <Compile Include="DiscountForm.Designer.cs">
       <DependentUpon>DiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="SettlePayment.cs">
       <SubType>Form</SubType>
@@ -178,8 +196,17 @@
     <EmbeddedResource Include="Catergory.resx">
       <DependentUpon>Catergory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DailySales.resx">
+      <DependentUpon>DailySales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DiscountForm.resx">
       <DependentUpon>DiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettlePayment.resx">
       <DependentUpon>SettlePayment.cs</DependentUpon>

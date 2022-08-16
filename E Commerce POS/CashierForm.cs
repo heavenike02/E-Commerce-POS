@@ -28,6 +28,7 @@ namespace E_Commerce_POS
             conn = new SqlConnection(dbcon.myConnection());
             GetTransactionNO();
             DateLabel.Text = DateTime.Now.ToString("D");
+            LoadCart();
         }
 
         private void ExitPictureBox_Click(object sender, EventArgs e)
@@ -81,11 +82,25 @@ namespace E_Commerce_POS
         private void ClearCartButton_Click(object sender, EventArgs e)
         {
             Slide(ClearCartButton);
+            if (MessageBox.Show("Remove all items from cart?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                conn.Open();
+                cmd = new SqlCommand("Delete from tbCarts WHERE transactionnumber LIKE '" + TransactionNumberLabel.Text + "'", conn);
+                cmd.ExecuteNonQuery();
+                conn.Close(); 
+                LoadCart();
+                MessageBox.Show("All items has been sucessfully removed", " Remove Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+
+
+            }
         }
 
         private void DailySalesButton_Click(object sender, EventArgs e)
         {
             Slide(DailySalesButton);
+            DailySales dailysales = new DailySales();
+            dailysales.ShowDialog();
         }
 
         private void ChangePaswordButton_Click(object sender, EventArgs e)
@@ -96,6 +111,18 @@ namespace E_Commerce_POS
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             Slide(LogoutButton);
+             if(DGVCashier.Rows.Count > 0)
+            {
+                MessageBox.Show("Unable to Logout." +" Please cancel the transaction ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning) ;
+                return;
+            }
+
+            if (MessageBox.Show("Logout Application ? ", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            } 
         }
         #endregion Button
        
@@ -144,6 +171,7 @@ namespace E_Commerce_POS
 
         public void LoadCart()
         {
+            
             int i = 0;
             double total= 0;
             double discount = 0;
@@ -160,6 +188,19 @@ namespace E_Commerce_POS
                 total += Convert.ToDouble(dr["total"].ToString());
                 discount  += Convert.ToDouble(dr["disc"].ToString());
                 DGVCashier.Rows.Add(i, dr["Id"].ToString(), dr["reg"].ToString(), dr["price"].ToString(), dr["disc"].ToString(), double.Parse(dr["total"].ToString()).ToString("#,##0.00"));
+            }
+            if (DGVCashier.Rows.Count == 0)
+            {
+                AddDiscountButton.Enabled = false;
+                SettlePaymentButton.Enabled = false;
+                ClearCartButton.Enabled = false;
+            }
+            else if (DGVCashier.Rows.Count >= 1)
+            {
+
+                AddDiscountButton.Enabled = true;
+                SettlePaymentButton.Enabled =   true;
+                ClearCartButton.Enabled = true;
             }
             dr.Close();
             conn.Close();
@@ -190,6 +231,25 @@ namespace E_Commerce_POS
 
         }
 
-        
+        private void DGVCashier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = DGVCashier.Columns[e.ColumnIndex].Name;
+
+            if (colName == "Delete")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    conn.Open();
+                    cmd = new SqlCommand("DELETE FROM tbCarts WHERE transactionnumber LIKE '" + TransactionNumberLabel.Text + "'", conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    LoadCart();
+                    MessageBox.Show("Car has been sucessfully deleted from Cart.", "POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+        }
+
+      
     }
 }

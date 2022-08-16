@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.ChangePaswordButton = new System.Windows.Forms.Button();
@@ -45,13 +45,13 @@
             this.SearchProductButton = new System.Windows.Forms.Button();
             this.NewTransactionButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.UserName = new System.Windows.Forms.Label();
+            this.UserNameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.SlidePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ExitPictureBox = new System.Windows.Forms.PictureBox();
-            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -78,6 +78,8 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.RoleLabel = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCashier)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -270,7 +273,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.UserName);
+            this.panel2.Controls.Add(this.UserNameLabel);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -279,15 +282,15 @@
             this.panel2.Size = new System.Drawing.Size(253, 161);
             this.panel2.TabIndex = 0;
             // 
-            // UserName
+            // UserNameLabel
             // 
-            this.UserName.AutoSize = true;
-            this.UserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UserName.Location = new System.Drawing.Point(77, 112);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(71, 18);
-            this.UserName.TabIndex = 13;
-            this.UserName.Text = "Username";
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.UserNameLabel.Location = new System.Drawing.Point(77, 112);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(71, 18);
+            this.UserNameLabel.TabIndex = 13;
+            this.UserNameLabel.Text = "Username";
             // 
             // pictureBox1
             // 
@@ -323,8 +326,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.ExitPictureBox);
-            this.panel4.Controls.Add(this.UserNameLabel);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(265, 0);
@@ -347,23 +350,24 @@
             this.ExitPictureBox.TabStop = false;
             this.ExitPictureBox.Click += new System.EventHandler(this.ExitPictureBox_Click);
             // 
-            // UserNameLabel
+            // NameLabel
             // 
-            this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UserNameLabel.Location = new System.Drawing.Point(92, 55);
-            this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(110, 18);
-            this.UserNameLabel.TabIndex = 14;
-            this.UserNameLabel.Text = "Name And Role";
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.NameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.NameLabel.Location = new System.Drawing.Point(0, 1);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(50, 18);
+            this.NameLabel.TabIndex = 14;
+            this.NameLabel.Text = "Name ";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(86, 71);
+            this.pictureBox2.Size = new System.Drawing.Size(79, 71);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
@@ -417,7 +421,7 @@
             // VatableLabel
             // 
             this.VatableLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.VatableLabel.Location = new System.Drawing.Point(89, 336);
+            this.VatableLabel.Location = new System.Drawing.Point(86, 349);
             this.VatableLabel.Name = "VatableLabel";
             this.VatableLabel.Size = new System.Drawing.Size(74, 18);
             this.VatableLabel.TabIndex = 13;
@@ -427,7 +431,7 @@
             // TaxLabel
             // 
             this.TaxLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TaxLabel.Location = new System.Drawing.Point(89, 317);
+            this.TaxLabel.Location = new System.Drawing.Point(86, 324);
             this.TaxLabel.Name = "TaxLabel";
             this.TaxLabel.Size = new System.Drawing.Size(74, 18);
             this.TaxLabel.TabIndex = 12;
@@ -437,7 +441,7 @@
             // DIscountLabel
             // 
             this.DIscountLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DIscountLabel.Location = new System.Drawing.Point(89, 298);
+            this.DIscountLabel.Location = new System.Drawing.Point(86, 299);
             this.DIscountLabel.Name = "DIscountLabel";
             this.DIscountLabel.Size = new System.Drawing.Size(74, 18);
             this.DIscountLabel.TabIndex = 11;
@@ -447,7 +451,7 @@
             // SalesLabel
             // 
             this.SalesLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SalesLabel.Location = new System.Drawing.Point(89, 279);
+            this.SalesLabel.Location = new System.Drawing.Point(86, 274);
             this.SalesLabel.Name = "SalesLabel";
             this.SalesLabel.Size = new System.Drawing.Size(74, 18);
             this.SalesLabel.TabIndex = 10;
@@ -458,7 +462,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(6, 337);
+            this.label11.Location = new System.Drawing.Point(6, 349);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 18);
             this.label11.TabIndex = 9;
@@ -469,7 +473,7 @@
             // 
             this.label10.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(6, 319);
+            this.label10.Location = new System.Drawing.Point(6, 324);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 18);
             this.label10.TabIndex = 8;
@@ -480,7 +484,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(6, 301);
+            this.label9.Location = new System.Drawing.Point(6, 299);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 18);
             this.label9.TabIndex = 7;
@@ -491,7 +495,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(6, 283);
+            this.label8.Location = new System.Drawing.Point(6, 274);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 18);
             this.label8.TabIndex = 6;
@@ -503,7 +507,7 @@
             this.TransactionNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TransactionNumberLabel.Location = new System.Drawing.Point(6, 84);
             this.TransactionNumberLabel.Name = "TransactionNumberLabel";
-            this.TransactionNumberLabel.Size = new System.Drawing.Size(141, 18);
+            this.TransactionNumberLabel.Size = new System.Drawing.Size(166, 18);
             this.TransactionNumberLabel.TabIndex = 5;
             this.TransactionNumberLabel.Text = "0.00";
             this.TransactionNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,7 +528,7 @@
             this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DateLabel.Location = new System.Drawing.Point(6, 120);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(141, 18);
+            this.DateLabel.Size = new System.Drawing.Size(166, 18);
             this.DateLabel.TabIndex = 3;
             this.DateLabel.Text = "0.00";
             this.DateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -558,14 +562,14 @@
             this.DGVCashier.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DGVCashier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVCashier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVCashier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVCashier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGVCashier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVCashier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -575,14 +579,14 @@
             this.Column7,
             this.Column8,
             this.Delete});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVCashier.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVCashier.DefaultCellStyle = dataGridViewCellStyle10;
             this.DGVCashier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVCashier.EnableHeadersVisualStyles = false;
             this.DGVCashier.Location = new System.Drawing.Point(265, 80);
@@ -592,6 +596,7 @@
             this.DGVCashier.RowTemplate.Height = 24;
             this.DGVCashier.Size = new System.Drawing.Size(747, 581);
             this.DGVCashier.TabIndex = 3;
+            this.DGVCashier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCashier_CellContentClick);
             this.DGVCashier.SelectionChanged += new System.EventHandler(this.DGVCashier_SelectionChanged);
             // 
             // Column1
@@ -620,8 +625,8 @@
             // Column9
             // 
             this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column9.HeaderText = "Price";
             this.Column9.Name = "Column9";
             this.Column9.Width = 63;
@@ -629,8 +634,8 @@
             // Column7
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column7.HeaderText = "Discount";
             this.Column7.Name = "Column7";
             this.Column7.Width = 89;
@@ -638,8 +643,8 @@
             // Column8
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column8.HeaderText = "Total";
             this.Column8.Name = "Column8";
             // 
@@ -656,6 +661,26 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // RoleLabel
+            // 
+            this.RoleLabel.AutoSize = true;
+            this.RoleLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RoleLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.RoleLabel.Location = new System.Drawing.Point(141, 0);
+            this.RoleLabel.Name = "RoleLabel";
+            this.RoleLabel.Size = new System.Drawing.Size(41, 18);
+            this.RoleLabel.TabIndex = 16;
+            this.RoleLabel.Text = " Role";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.NameLabel);
+            this.panel7.Controls.Add(this.RoleLabel);
+            this.panel7.Location = new System.Drawing.Point(78, 55);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(182, 19);
+            this.panel7.TabIndex = 17;
             // 
             // CashierForm
             // 
@@ -679,11 +704,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVCashier)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -705,7 +731,6 @@
         private System.Windows.Forms.Button DailySalesButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label UserName;
         private System.Windows.Forms.PictureBox ExitPictureBox;
         private System.Windows.Forms.Panel SlidePanel;
         private System.Windows.Forms.Label VatableLabel;
@@ -723,7 +748,7 @@
         private System.Windows.Forms.Label TimerLabel;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Label UserNameLabel;
+        public System.Windows.Forms.Label NameLabel;
         public System.Windows.Forms.Label TransactionNumberLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -733,5 +758,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
         public System.Windows.Forms.DataGridView DGVCashier;
+        public System.Windows.Forms.Label UserNameLabel;
+        public System.Windows.Forms.Label RoleLabel;
+        private System.Windows.Forms.Panel panel7;
     }
 }
