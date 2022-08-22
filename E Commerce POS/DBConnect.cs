@@ -5,12 +5,14 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace E_Commerce_POS
 {
     internal class DBConnect
 
     {
+        
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         private string con;
@@ -32,5 +34,26 @@ namespace E_Commerce_POS
 
 
         }
+
+        public void ExceuteQuery(String sql)
+        {
+            try
+            {
+                conn.ConnectionString = myConnection();
+            conn.Open();
+            cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+            }
+            catch (Exception ex )
+            {
+
+               MessageBox.Show(ex.Message);
+            }
+            
+
+        }
+        
     }
 }

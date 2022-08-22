@@ -17,6 +17,7 @@ namespace E_Commerce_POS
         SqlCommand cmd = new SqlCommand();
         DBConnect dbcon = new DBConnect();
         SqlDataReader dr;
+        public string SoldUser;
         double total = 0;   
         public DailySales()
         {
@@ -77,7 +78,7 @@ namespace E_Commerce_POS
 
 
                         total += double.Parse(dr["total"].ToString());
-                        DGVSold.Rows.Add(i, dr["Id"].ToString(), dr["transactionnumber"].ToString(), dr["reg"].ToString(), dr["price"].ToString(), dr["disc"].ToString(), dr["deposit"].ToString(), dr["total"].ToString(), dr["cashier"].ToString(), dr["saledate"].ToString());
+                        DGVSold.Rows.Add(i, dr["Id"].ToString(), dr["transactionnumber"].ToString(), dr["reg"].ToString(), dr["price"].ToString(), dr["disc"].ToString(), dr["deposit"].ToString(), dr["total"].ToString(), dr["cashier"].ToString(), DateTime.Parse(dr["saledate"].ToString()).ToString("MM/dd/yyyy"));
                     }
 
                     dr.Close();
@@ -116,6 +117,31 @@ namespace E_Commerce_POS
         {
             LoadSoldProduct();
 
+        }
+
+        private void DGVSold_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {// total = price - discount - depsoit
+            string colName = DGVSold.Columns[e.ColumnIndex].Name;
+            if (colName == "Cancel")
+            {
+                CancelOrderForm cancelorderform = new CancelOrderForm(this);
+                cancelorderform.IdTextBox.Text = DGVSold.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cancelorderform.TransactionNoTextBox.Text = DGVSold.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cancelorderform.RegTextBox.Text = DGVSold.Rows[e.RowIndex].Cells[3].Value.ToString();
+                
+                cancelorderform.PriceTextBox.Text = DGVSold.Rows[e.RowIndex].Cells[4].Value.ToString();
+                cancelorderform.QtyTextBox.Text = "1";
+                cancelorderform.DiscountTextBox.Text = DGVSold.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cancelorderform.TotalTextBox.Text = DGVSold.Rows[e.RowIndex].Cells[7].Value.ToString();
+                cancelorderform.DepositTextBox.Text = DGVSold.Rows[e.RowIndex].Cells[6].Value.ToString();
+                cancelorderform.DateTextbox.Text = DGVSold.Rows[e.RowIndex].Cells[9].Value.ToString();
+                cancelorderform.CancelledByTextBox.Text = SoldUser;
+
+
+
+
+                cancelorderform.ShowDialog();   
+            }
         }
     }
 }

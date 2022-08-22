@@ -100,12 +100,16 @@ namespace E_Commerce_POS
         {
             Slide(DailySalesButton);
             DailySales dailysales = new DailySales();
+            dailysales.SoldUser = NameLabel.Text;
             dailysales.ShowDialog();
+
         }
 
         private void ChangePaswordButton_Click(object sender, EventArgs e)
         {
             Slide(ChangePaswordButton);
+            ChangePasswordForm change = new ChangePasswordForm(this);
+            change.ShowDialog();
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)

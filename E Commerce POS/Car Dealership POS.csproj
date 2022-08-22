@@ -95,6 +95,12 @@
     <Compile Include="Catergory.Designer.cs">
       <DependentUpon>Catergory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DailySales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +125,11 @@
     <Compile Include="DiscountForm.Designer.cs">
       <DependentUpon>DiscountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="CancelOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CancelOrderForm.Designer.cs">
+      <DependentUpon>CancelOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -181,6 +187,12 @@
     <Compile Include="UserAccount.Designer.cs">
       <DependentUpon>UserAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="VoidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoidForm.Designer.cs">
+      <DependentUpon>VoidForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Brand.resx">
       <DependentUpon>Brand.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,14 +208,17 @@
     <EmbeddedResource Include="Catergory.resx">
       <DependentUpon>Catergory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DailySales.resx">
       <DependentUpon>DailySales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DiscountForm.resx">
       <DependentUpon>DiscountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CancelOrderForm.resx">
+      <DependentUpon>CancelOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -240,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserAccount.resx">
       <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoidForm.resx">
+      <DependentUpon>VoidForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DBPOSaleDataSet.xsc">
       <DependentUpon>DBPOSaleDataSet.xsd</DependentUpon>

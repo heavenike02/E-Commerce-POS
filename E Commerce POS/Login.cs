@@ -116,6 +116,7 @@ namespace E_Commerce_POS
             {
                 conn.Close();
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
@@ -125,6 +126,12 @@ namespace E_Commerce_POS
             {
                 Application.Exit();
             }
+        }
+
+       
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
