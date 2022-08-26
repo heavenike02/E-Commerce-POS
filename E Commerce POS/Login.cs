@@ -95,6 +95,7 @@ namespace E_Commerce_POS
                                         this.Hide();
                                         MainForm main = new MainForm();
                                         main.UsernameLabel.Text = _name;
+                                        main._pass = _pass;
                                         main.ShowDialog();      
                        
 
@@ -129,9 +130,6 @@ namespace E_Commerce_POS
         }
 
        
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

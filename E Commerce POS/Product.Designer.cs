@@ -79,7 +79,7 @@
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.ForeColor = System.Drawing.SystemColors.Control;
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.Location = new System.Drawing.Point(1046, 0);
+            this.AddButton.Location = new System.Drawing.Point(864, 0);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(137, 100);
             this.AddButton.TabIndex = 2;
@@ -95,7 +95,7 @@
             this.FooterPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.FooterPanel.Location = new System.Drawing.Point(0, 561);
             this.FooterPanel.Name = "FooterPanel";
-            this.FooterPanel.Size = new System.Drawing.Size(1183, 100);
+            this.FooterPanel.Size = new System.Drawing.Size(1001, 100);
             this.FooterPanel.TabIndex = 2;
             // 
             // panel1
@@ -201,7 +201,7 @@
             this.DGVProduct.Name = "DGVProduct";
             this.DGVProduct.RowHeadersWidth = 51;
             this.DGVProduct.RowTemplate.Height = 24;
-            this.DGVProduct.Size = new System.Drawing.Size(1183, 561);
+            this.DGVProduct.Size = new System.Drawing.Size(1001, 561);
             this.DGVProduct.TabIndex = 1;
             this.DGVProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVProduct_CellContentClick_1);
             // 
@@ -332,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 661);
+            this.ClientSize = new System.Drawing.Size(1001, 661);
             this.ControlBox = false;
             this.Controls.Add(this.DGVProduct);
             this.Controls.Add(this.FooterPanel);

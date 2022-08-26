@@ -29,6 +29,7 @@ namespace E_Commerce_POS
             GetTransactionNO();
             DateLabel.Text = DateTime.Now.ToString("D");
             LoadCart();
+            AddressLabel.Text = "123 Sunshine Lane";
         }
 
         private void ExitPictureBox_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace E_Commerce_POS
         SqlConnection conn = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
         DBConnect dbcon = new DBConnect();
+        public string _pass;
 
         public MainForm()
         {
@@ -33,7 +34,7 @@ namespace E_Commerce_POS
             FIlesSubPanel.Visible = false;
             ProductSubPanel.Visible = false;
             SettingsSubPanel.Visible = false;
-            StockSubPanel.Visible = false;
+           
 
         }
 
@@ -48,8 +49,7 @@ namespace E_Commerce_POS
             if (SettingsSubPanel.Visible == true)
                 SettingsSubPanel.Visible = false;
 
-            if (StockSubPanel.Visible == true)
-                StockSubPanel.Visible = false;
+          
         }
 
         private void ShowSubMenu(Panel Submenu)
@@ -115,10 +115,7 @@ namespace E_Commerce_POS
             HideSubPanel();
         }
 
-        private void StockButton_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(StockSubPanel);
-        }
+        
 
         private void StockEntryButton_Click(object sender, EventArgs e)
         {
@@ -152,7 +149,7 @@ namespace E_Commerce_POS
 
         private void UserButton_Click(object sender, EventArgs e)
         {
-            OpenChildFord(new UserAccount());
+            OpenChildFord(new UserAccount(this));
             HideSubPanel();
 
         }
@@ -179,8 +176,9 @@ namespace E_Commerce_POS
             }
         }
 
+
         #endregion Button
 
-
+        
     }
 }
