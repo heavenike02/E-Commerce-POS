@@ -19,7 +19,7 @@ namespace E_Commerce_POS
         DBConnect dbcon = new DBConnect();
         SqlDataReader dr;
         MainForm main;
-        string username;
+        public string username;
         string name;
         string role;
         string accountstatus;
@@ -62,7 +62,8 @@ namespace E_Commerce_POS
 
         private void UserAccount_Load(object sender, EventArgs e)
         {
-            UsernameLabel.Text =  main.UsernameLabel.Text;  
+            UsernameLabel.Text =  main.UsernameLabel.Text;
+            DGVUser.CurrentCell = null;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -157,19 +158,25 @@ namespace E_Commerce_POS
             {
                 RemoveButton.Enabled = false;
                 ResetPasswordButton.Enabled = false;
+                ChangePasswordLabel.Text = "To change your password, go to change password tag";
+
             }
             else
             {
                 RemoveButton.Enabled = true; ;
                 ResetPasswordButton.Enabled = true;
+                ChangePasswordLabel.Text = "To change the password for " + username + ",Click Reset Password.";
+
             }
 
+            PasswordForUsernameGroupBox.Text = "Password For " + username;
             
         }
 
         private void ResetPasswordButton_Click(object sender, EventArgs e)
         {
-            
+            ResetPasswordForm reset = new ResetPasswordForm(this);
+            reset.ShowDialog();
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -188,12 +195,23 @@ namespace E_Commerce_POS
                    }
             }
             catch (Exception ex)
-            {
 
+
+            {
                 MessageBox.Show(ex.Message, "Error");
             }
            
 
+        }
+
+        private void PropertiesButton_Click(object sender, EventArgs e)
+        {
+            PropertiesForm properties =  new PropertiesForm(this);
+            properties.NameTextbox.Text = name;
+            properties.RoleComboBox.Text = role;
+            properties.AccountStatusComboBox.Text = accountstatus;
+            properties.username = username;
+            properties.ShowDialog();    
         }
     }
 }    

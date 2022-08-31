@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAccount));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.FooterPanel = new System.Windows.Forms.Panel();
+            this.PasswordForUsernameGroupBox = new System.Windows.Forms.Panel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.RoleComboBox = new System.Windows.Forms.ComboBox();
@@ -60,17 +60,17 @@
             this.RETypePasswordTexBox = new System.Windows.Forms.TextBox();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ResetPasswordButton = new System.Windows.Forms.Button();
+            this.ChangePasswordLabel = new System.Windows.Forms.Label();
+            this.PropertiesButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.DGVUser = new System.Windows.Forms.DataGridView();
-            this.ResetPasswordButton = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FooterPanel.SuspendLayout();
+            this.PasswordForUsernameGroupBox.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.PasswordTabPage.SuspendLayout();
@@ -94,15 +94,15 @@
             this.label1.Text = "\r\nUser \r\nSettings";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FooterPanel
+            // PasswordForUsernameGroupBox
             // 
-            this.FooterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            this.FooterPanel.Controls.Add(this.label1);
-            this.FooterPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.FooterPanel.Location = new System.Drawing.Point(0, 479);
-            this.FooterPanel.Name = "FooterPanel";
-            this.FooterPanel.Size = new System.Drawing.Size(848, 88);
-            this.FooterPanel.TabIndex = 3;
+            this.PasswordForUsernameGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            this.PasswordForUsernameGroupBox.Controls.Add(this.label1);
+            this.PasswordForUsernameGroupBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PasswordForUsernameGroupBox.Location = new System.Drawing.Point(0, 479);
+            this.PasswordForUsernameGroupBox.Name = "PasswordForUsernameGroupBox";
+            this.PasswordForUsernameGroupBox.Size = new System.Drawing.Size(848, 88);
+            this.PasswordForUsernameGroupBox.TabIndex = 3;
             // 
             // metroTabControl1
             // 
@@ -142,7 +142,7 @@
             this.metroTabPage1.HorizontalScrollbarSize = 1;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 29);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(858, 501);
+            this.metroTabPage1.Size = new System.Drawing.Size(840, 446);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Create Account";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -300,7 +300,7 @@
             this.PasswordTabPage.HorizontalScrollbarSize = 1;
             this.PasswordTabPage.Location = new System.Drawing.Point(4, 29);
             this.PasswordTabPage.Name = "PasswordTabPage";
-            this.PasswordTabPage.Size = new System.Drawing.Size(858, 501);
+            this.PasswordTabPage.Size = new System.Drawing.Size(840, 446);
             this.PasswordTabPage.TabIndex = 1;
             this.PasswordTabPage.Text = "Change Password";
             this.PasswordTabPage.VerticalScrollbarBarColor = true;
@@ -337,7 +337,7 @@
             this.CancelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton2.Image = ((System.Drawing.Image)(resources.GetObject("CancelButton2.Image")));
             this.CancelButton2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CancelButton2.Location = new System.Drawing.Point(697, 270);
+            this.CancelButton2.Location = new System.Drawing.Point(680, 232);
             this.CancelButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.CancelButton2.Name = "CancelButton2";
             this.CancelButton2.Size = new System.Drawing.Size(69, 101);
@@ -356,7 +356,7 @@
             this.SaveButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton2.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton2.Image")));
             this.SaveButton2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveButton2.Location = new System.Drawing.Point(621, 281);
+            this.SaveButton2.Location = new System.Drawing.Point(604, 243);
             this.SaveButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.SaveButton2.Name = "SaveButton2";
             this.SaveButton2.Size = new System.Drawing.Size(69, 90);
@@ -426,7 +426,7 @@
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.groupBox1);
-            this.metroTabPage3.Controls.Add(this.button1);
+            this.metroTabPage3.Controls.Add(this.PropertiesButton);
             this.metroTabPage3.Controls.Add(this.RemoveButton);
             this.metroTabPage3.Controls.Add(this.DGVUser);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
@@ -445,7 +445,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.ResetPasswordButton);
-            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.ChangePasswordLabel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Location = new System.Drawing.Point(0, 347);
             this.groupBox1.Name = "groupBox1";
@@ -454,32 +454,52 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Password for Username";
             // 
-            // label11
+            // ResetPasswordButton
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(388, 18);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "To change the password for username, click Reset Password";
+            this.ResetPasswordButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResetPasswordButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ResetPasswordButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.ResetPasswordButton.FlatAppearance.BorderSize = 0;
+            this.ResetPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetPasswordButton.Image = ((System.Drawing.Image)(resources.GetObject("ResetPasswordButton.Image")));
+            this.ResetPasswordButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ResetPasswordButton.Location = new System.Drawing.Point(718, 10);
+            this.ResetPasswordButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ResetPasswordButton.Name = "ResetPasswordButton";
+            this.ResetPasswordButton.Size = new System.Drawing.Size(116, 81);
+            this.ResetPasswordButton.TabIndex = 28;
+            this.ResetPasswordButton.Text = "Reset Password ";
+            this.ResetPasswordButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ResetPasswordButton.UseVisualStyleBackColor = false;
+            this.ResetPasswordButton.Click += new System.EventHandler(this.ResetPasswordButton_Click);
             // 
-            // button1
+            // ChangePasswordLabel
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(743, 236);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 86);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Properties";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.ChangePasswordLabel.AutoSize = true;
+            this.ChangePasswordLabel.Location = new System.Drawing.Point(6, 43);
+            this.ChangePasswordLabel.Name = "ChangePasswordLabel";
+            this.ChangePasswordLabel.Size = new System.Drawing.Size(388, 18);
+            this.ChangePasswordLabel.TabIndex = 29;
+            this.ChangePasswordLabel.Text = "To change the password for username, click Reset Password";
+            // 
+            // PropertiesButton
+            // 
+            this.PropertiesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PropertiesButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PropertiesButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.PropertiesButton.FlatAppearance.BorderSize = 0;
+            this.PropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PropertiesButton.Image = ((System.Drawing.Image)(resources.GetObject("PropertiesButton.Image")));
+            this.PropertiesButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.PropertiesButton.Location = new System.Drawing.Point(743, 236);
+            this.PropertiesButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.PropertiesButton.Name = "PropertiesButton";
+            this.PropertiesButton.Size = new System.Drawing.Size(82, 86);
+            this.PropertiesButton.TabIndex = 26;
+            this.PropertiesButton.Text = "Properties";
+            this.PropertiesButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.PropertiesButton.UseVisualStyleBackColor = false;
+            this.PropertiesButton.Click += new System.EventHandler(this.PropertiesButton_Click);
             // 
             // RemoveButton
             // 
@@ -508,14 +528,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVUser.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DGVUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -523,14 +543,14 @@
             this.Column3,
             this.Column5,
             this.Column4});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVUser.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(43)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVUser.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVUser.EnableHeadersVisualStyles = false;
             this.DGVUser.Location = new System.Drawing.Point(8, 0);
             this.DGVUser.Name = "DGVUser";
@@ -539,25 +559,6 @@
             this.DGVUser.Size = new System.Drawing.Size(824, 228);
             this.DGVUser.TabIndex = 2;
             this.DGVUser.SelectionChanged += new System.EventHandler(this.DGVUser_SelectionChanged);
-            // 
-            // ResetPasswordButton
-            // 
-            this.ResetPasswordButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResetPasswordButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ResetPasswordButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.ResetPasswordButton.FlatAppearance.BorderSize = 0;
-            this.ResetPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetPasswordButton.Image = ((System.Drawing.Image)(resources.GetObject("ResetPasswordButton.Image")));
-            this.ResetPasswordButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ResetPasswordButton.Location = new System.Drawing.Point(718, 10);
-            this.ResetPasswordButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.ResetPasswordButton.Name = "ResetPasswordButton";
-            this.ResetPasswordButton.Size = new System.Drawing.Size(116, 81);
-            this.ResetPasswordButton.TabIndex = 28;
-            this.ResetPasswordButton.Text = "Reset Password ";
-            this.ResetPasswordButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ResetPasswordButton.UseVisualStyleBackColor = false;
-            this.ResetPasswordButton.Click += new System.EventHandler(this.ResetPasswordButton_Click);
             // 
             // Column1
             // 
@@ -603,14 +604,14 @@
             this.ClientSize = new System.Drawing.Size(848, 567);
             this.ControlBox = false;
             this.Controls.Add(this.metroTabControl1);
-            this.Controls.Add(this.FooterPanel);
+            this.Controls.Add(this.PasswordForUsernameGroupBox);
             this.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Account";
             this.Load += new System.EventHandler(this.UserAccount_Load);
-            this.FooterPanel.ResumeLayout(false);
+            this.PasswordForUsernameGroupBox.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
@@ -627,7 +628,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel FooterPanel;
+        private System.Windows.Forms.Panel PasswordForUsernameGroupBox;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private System.Windows.Forms.TextBox FullNameTextBox;
@@ -654,10 +655,9 @@
         public System.Windows.Forms.Button SaveButton2;
         private System.Windows.Forms.DataGridView DGVUser;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label11;
-        public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label ChangePasswordLabel;
+        public System.Windows.Forms.Button PropertiesButton;
         public System.Windows.Forms.Button RemoveButton;
         public System.Windows.Forms.Button ResetPasswordButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -665,5 +665,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        public System.Windows.Forms.Label UsernameLabel;
     }
 }

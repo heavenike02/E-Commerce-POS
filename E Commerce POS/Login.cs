@@ -94,7 +94,7 @@ namespace E_Commerce_POS
                                         PasswordTextBox.Clear();
                                         this.Hide();
                                         MainForm main = new MainForm();
-                                        main.UsernameLabel.Text = _name;
+                                        main.UsernameLabel.Text = _username;
                                         main._pass = _pass;
                                         main.ShowDialog();      
                        
